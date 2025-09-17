@@ -1,0 +1,17 @@
+{
+  "extends": ["html-validate:recommended"],
+  "rules": {
+    "close-order": "error",
+    "void-style": "off",
+    "class-pattern": "off",
+    "require-sri": "off",
+    "no-inline-style": "warn",
+    "no-trailing-whitespace": "off",
+    "wcag/h30": "warn",
+    "prefer-native-element": "error",
+    "no-redundant-for": "error",
+    "no-redundant-role": "error",
+    "aria-label-misuse": "error",
+    "aria-hidden-body": "error"
+  }
+}

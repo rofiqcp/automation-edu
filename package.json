@@ -1,0 +1,84 @@
+{
+  "name": "automation-edu",
+  "version": "1.0.0",
+  "description": "Website edukasi otomasi industri modern untuk engineer",
+  "main": "index.html",
+  "scripts": {
+    "setup": "node setup.js",
+    "start": "live-server --port=3000 --open=/index.html --watch=.",
+    "dev": "npm run start",
+    "build": "npm run clean && npm run minify:css && npm run minify:js && npm run minify:html && npm run copy:assets",
+    "clean": "rimraf dist && mkdir dist",
+    "minify:css": "cleancss -o dist/styles.min.css styles.css",
+    "minify:js": "uglifyjs script.js -c -m -o dist/script.min.js",
+    "minify:html": "node build-html.js",
+    "copy:assets": "copyfiles \"*.md\" \"LICENSE\" \".gitignore\" dist/",
+    "serve": "http-server dist -p 8081 -o",
+    "deploy:surge": "npm run build && surge dist --domain automation-edu.surge.sh",
+    "deploy:netlify": "npm run build && netlify deploy --prod --dir dist",
+    "deploy:gh-pages": "npm run build && gh-pages -d dist",
+    "lint:css": "stylelint styles.css",
+    "lint:js": "eslint script.js",
+    "lint": "npm run lint:css && npm run lint:js",
+    "format": "prettier --write \"*.{html,css,js,md}\"",
+    "validate:html": "html-validate index.html",
+    "optimize:images": "imagemin assets/images/* --out-dir=dist/assets/images",
+    "test": "npm run lint && npm run validate:html",
+    "precommit": "npm run lint && npm run format",
+    "prepare": "husky install"
+  },
+  "keywords": [
+    "automation",
+    "industrial",
+    "education",
+    "plc",
+    "scada",
+    "robotics",
+    "engineering",
+    "website",
+    "responsive"
+  ],
+  "author": {
+    "name": "AutomationEdu Team",
+    "email": "info@automationedu.com",
+    "url": "https://github.com/automationedu"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/username/automation-edu.git"
+  },
+  "bugs": {
+    "url": "https://github.com/username/automation-edu/issues"
+  },
+  "homepage": "https://username.github.io/automation-edu",
+  "devDependencies": {
+    "clean-css-cli": "^5.6.2",
+    "copyfiles": "^2.4.1",
+    "eslint": "^8.57.0",
+    "gh-pages": "^6.1.1",
+    "html-minifier": "^4.0.0",
+    "html-validate": "^8.7.4",
+    "http-server": "^14.1.1",
+    "husky": "^8.0.3",
+    "imagemin": "^8.0.1",
+    "imagemin-cli": "^7.0.0",
+    "live-server": "^1.2.2",
+    "netlify-cli": "^17.10.1",
+    "prettier": "^3.1.1",
+    "rimraf": "^5.0.5",
+    "stylelint": "^16.0.2",
+    "stylelint-config-standard": "^36.0.0",
+    "surge": "^0.23.1",
+    "uglify-js": "^3.17.4"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  }
+}
