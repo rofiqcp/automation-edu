@@ -111,7 +111,6 @@ if (contactForm) {
         e.preventDefault();
 
         // Get form data
-        const formData = new FormData(contactForm);
         const name = contactForm.querySelector('input[type="text"]').value;
         const email = contactForm.querySelector('input[type="email"]').value;
         const message = contactForm.querySelector('textarea').value;
@@ -284,6 +283,7 @@ function initSearch() {
         const query = e.target.value.toLowerCase();
         if (query.length > 2) {
             // Simulate search results
+            // eslint-disable-next-line no-console
             console.log(`Searching for: ${query}`);
         }
     });
@@ -294,7 +294,7 @@ initSearch();
 
 // Add loading states for buttons
 document.querySelectorAll('.btn, .course-btn').forEach(btn => {
-    btn.addEventListener('click', function (e) {
+    btn.addEventListener('click', function () {
         if (this.classList.contains('loading-btn')) return;
 
         const originalText = this.textContent;
@@ -348,7 +348,7 @@ initThemeToggle();
 
 // Performance optimization: Lazy loading for images
 function initLazyLoading() {
-    const imageObserver = new IntersectionObserver((entries, observer) => {
+    const imageObserver = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 const img = entry.target;
@@ -376,10 +376,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Error handling
 window.addEventListener('error', e => {
+    // eslint-disable-next-line no-console
     console.error('JavaScript Error:', e.error);
 });
 
 // Console welcome message
+// eslint-disable-next-line no-console
 console.log(`
 🚀 AutomationEdu Website
 📧 Hubungi kami: info@automationedu.com

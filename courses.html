@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Kursus - AutomationEdu</title>
+        <link rel="stylesheet" href="styles.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <i class="fas fa-cogs"></i>
+                    <span>AutomationEdu</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="courses.html" class="active">Kursus</a></li>
+                    <li><a href="tutorials.html">Tutorial</a></li>
+                    <li><a href="projects.html">Proyek</a></li>
+                    <li><a href="about.html">Tentang</a></li>
+                    <li><a href="contact.html">Kontak</a></li>
+                </ul>
+                <div class="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+
+        <main class="courses-page">
+            <section class="page-header">
+                <div class="container">
+                    <h1>Kursus Otomasi Industri</h1>
+                    <p>
+                        Pelajari teknologi otomasi dari dasar hingga mahir
+                        dengan kurikulum terstruktur
+                    </p>
+                </div>
+            </section>
+
+            <section class="course-filters">
+                <div class="container">
+                    <div class="filter-tabs">
+                        <button class="filter-btn active" data-filter="all">
+                            Semua Kursus
+                        </button>
+                        <button class="filter-btn" data-filter="beginner">
+                            Pemula
+                        </button>
+                        <button class="filter-btn" data-filter="intermediate">
+                            Menengah
+                        </button>
+                        <button class="filter-btn" data-filter="advanced">
+                            Lanjutan
+                        </button>
+                    </div>
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input
+                            type="text"
+                            placeholder="Cari kursus..."
+                            id="courseSearch"
+                        />
+                    </div>
+                </div>
+            </section>
+
+            <section class="courses-grid-section">
+                <div class="container">
+                    <div class="courses-grid">
+                        <!-- PLC Programming Course -->
+                        <div class="course-card" data-level="beginner">
+                            <div class="course-image">
+                                <i class="fas fa-microchip"></i>
+                                <div class="course-badge">Populer</div>
+                            </div>
+                            <div class="course-content">
+                                <h3>PLC Programming Fundamentals</h3>
+                                <p>
+                                    Pelajari dasar-dasar pemrograman PLC dengan
+                                    ladder logic dan function block diagram.
+                                </p>
+                                <div class="course-meta">
+                                    <span class="duration"
+                                        ><i class="fas fa-clock"></i> 8
+                                        Minggu</span
+                                    >
+                                    <span class="level"
+                                        ><i class="fas fa-signal"></i>
+                                        Pemula</span
+                                    >
+                                    <span class="students"
+                                        ><i class="fas fa-users"></i> 1,234
+                                        siswa</span
+                                    >
+                                </div>
+                                <div class="course-price">
+                                    <span class="price">Gratis</span>
+                                </div>
+                                <a
+                                    href="course-detail.html?id=plc-fundamentals"
+                                    class="course-btn"
+                                    >Mulai Belajar</a
+                                >
+                            </div>
+                        </div>
+
+                        <!-- SCADA Systems Course -->
+                        <div class="course-card" data-level="intermediate">
+                            <div class="course-image">
+                                <i class="fas fa-network-wired"></i>
+                            </div>
+                            <div class="course-content">
+                                <h3>SCADA Systems Design</h3>
+                                <p>
+                                    Menguasai desain dan implementasi sistem
+                                    SCADA untuk monitoring industri.
+                                </p>
+                                <div class="course-meta">
+                                    <span class="duration"
+                                        ><i class="fas fa-clock"></i> 6
+                                        Minggu</span
+                                    >
+                                    <span class="level"
+                                        ><i class="fas fa-signal"></i>
+                                        Menengah</span
+                                    >
+                                    <span class="students"
+                                        ><i class="fas fa-users"></i> 856
+                                        siswa</span
+                                    >
+                                </div>
+                                <div class="course-price">
+                                    <span class="price">Gratis</span>
+                                </div>
+                                <a
+                                    href="course-detail.html?id=scada-design"
+                                    class="course-btn"
+                                    >Mulai Belajar</a
+                                >
+                            </div>
+                        </div>
+
+                        <!-- Industrial Robotics Course -->
+                        <div class="course-card" data-level="advanced">
+                            <div class="course-image">
+                                <i class="fas fa-robot"></i>
+                                <div class="course-badge new">Baru</div>
+                            </div>
+                            <div class="course-content">
+                                <h3>Industrial Robotics</h3>
+                                <p>
+                                    Implementasi robot industri untuk otomasi
+                                    manufaktur dan assembly line.
+                                </p>
+                                <div class="course-meta">
+                                    <span class="duration"
+                                        ><i class="fas fa-clock"></i> 10
+                                        Minggu</span
+                                    >
+                                    <span class="level"
+                                        ><i class="fas fa-signal"></i>
+                                        Lanjutan</span
+                                    >
+                                    <span class="students"
+                                        ><i class="fas fa-users"></i> 432
+                                        siswa</span
+                                    >
+                                </div>
+                                <div class="course-price">
+                                    <span class="price">Gratis</span>
+                                </div>
+                                <a
+                                    href="course-detail.html?id=industrial-robotics"
+                                    class="course-btn"
+                                    >Mulai Belajar</a
+                                >
+                            </div>
+                        </div>
+
+                        <!-- HMI Development Course -->
+                        <div class="course-card" data-level="intermediate">
+                            <div class="course-image">
+                                <i class="fas fa-desktop"></i>
+                            </div>
+                            <div class="course-content">
+                                <h3>HMI Development</h3>
+                                <p>
+                                    Belajar membuat Human Machine Interface yang
+                                    user-friendly dan efektif.
+                                </p>
+                                <div class="course-meta">
+                                    <span class="duration"
+                                        ><i class="fas fa-clock"></i> 5
+                                        Minggu</span
+                                    >
+                                    <span class="level"
+                                        ><i class="fas fa-signal"></i>
+                                        Menengah</span
+                                    >
+                                    <span class="students"
+                                        ><i class="fas fa-users"></i> 678
+                                        siswa</span
+                                    >
+                                </div>
+                                <div class="course-price">
+                                    <span class="price">Gratis</span>
+                                </div>
+                                <a
+                                    href="course-detail.html?id=hmi-development"
+                                    class="course-btn"
+                                    >Mulai Belajar</a
+                                >
+                            </div>
+                        </div>
+
+                        <!-- Process Control Course -->
+                        <div class="course-card" data-level="advanced">
+                            <div class="course-image">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="course-content">
+                                <h3>Advanced Process Control</h3>
+                                <p>
+                                    Teknik kontrol proses lanjutan dengan PID
+                                    tuning dan model predictive control.
+                                </p>
+                                <div class="course-meta">
+                                    <span class="duration"
+                                        ><i class="fas fa-clock"></i> 12
+                                        Minggu</span
+                                    >
+                                    <span class="level"
+                                        ><i class="fas fa-signal"></i>
+                                        Lanjutan</span
+                                    >
+                                    <span class="students"
+                                        ><i class="fas fa-users"></i> 234
+                                        siswa</span
+                                    >
+                                </div>
+                                <div class="course-price">
+                                    <span class="price">Gratis</span>
+                                </div>
+                                <a
+                                    href="course-detail.html?id=process-control"
+                                    class="course-btn"
+                                    >Mulai Belajar</a
+                                >
+                            </div>
+                        </div>
+
+                        <!-- Safety Systems Course -->
+                        <div class="course-card" data-level="beginner">
+                            <div class="course-image">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div class="course-content">
+                                <h3>Industrial Safety Systems</h3>
+                                <p>
+                                    Memahami sistem keamanan industri dan
+                                    implementasi safety instrumented systems.
+                                </p>
+                                <div class="course-meta">
+                                    <span class="duration"
+                                        ><i class="fas fa-clock"></i> 7
+                                        Minggu</span
+                                    >
+                                    <span class="level"
+                                        ><i class="fas fa-signal"></i>
+                                        Pemula</span
+                                    >
+                                    <span class="students"
+                                        ><i class="fas fa-users"></i> 567
+                                        siswa</span
+                                    >
+                                </div>
+                                <div class="course-price">
+                                    <span class="price">Gratis</span>
+                                </div>
+                                <a
+                                    href="course-detail.html?id=safety-systems"
+                                    class="course-btn"
+                                    >Mulai Belajar</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <div class="footer-logo">
+                            <i class="fas fa-cogs"></i>
+                            <span>AutomationEdu</span>
+                        </div>
+                        <p>
+                            Platform pembelajaran otomasi industri terdepan di
+                            Indonesia.
+                        </p>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Pembelajaran</h4>
+                        <ul>
+                            <li><a href="courses.html">Kursus</a></li>
+                            <li><a href="tutorials.html">Tutorial</a></li>
+                            <li><a href="projects.html">Proyek</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Sumber Daya</h4>
+                        <ul>
+                            <li><a href="#">Dokumentasi</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Blog</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Ikuti Kami</h4>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-github"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2024 AutomationEdu. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+        <script src="script.js"></script>
+    </body>
+</html>

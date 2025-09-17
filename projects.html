@@ -1,0 +1,673 @@
+<!doctype html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Proyek - AutomationEdu</title>
+        <link rel="stylesheet" href="styles.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <i class="fas fa-cogs"></i>
+                    <span>AutomationEdu</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="courses.html">Kursus</a></li>
+                    <li><a href="tutorials.html">Tutorial</a></li>
+                    <li><a href="projects.html" class="active">Proyek</a></li>
+                    <li><a href="about.html">Tentang</a></li>
+                    <li><a href="contact.html">Kontak</a></li>
+                </ul>
+                <div class="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+
+        <main class="projects-page">
+            <section class="page-header">
+                <div class="container">
+                    <h1>Proyek Otomasi Industri</h1>
+                    <p>
+                        Jelajahi proyek-proyek nyata dan implementasi sistem
+                        otomasi di berbagai industri
+                    </p>
+                </div>
+            </section>
+
+            <section class="project-filters">
+                <div class="container">
+                    <div class="filter-controls">
+                        <div class="project-categories">
+                            <button class="filter-btn active" data-filter="all">
+                                Semua Proyek
+                            </button>
+                            <button
+                                class="filter-btn"
+                                data-filter="manufacturing"
+                            >
+                                Manufacturing
+                            </button>
+                            <button class="filter-btn" data-filter="process">
+                                Process Control
+                            </button>
+                            <button class="filter-btn" data-filter="robotics">
+                                Robotics
+                            </button>
+                            <button class="filter-btn" data-filter="energy">
+                                Energy
+                            </button>
+                            <button class="filter-btn" data-filter="water">
+                                Water Treatment
+                            </button>
+                        </div>
+                        <div class="project-search">
+                            <i class="fas fa-search"></i>
+                            <input
+                                type="text"
+                                placeholder="Cari proyek..."
+                                id="projectSearch"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="featured-project">
+                <div class="container">
+                    <div class="featured-content">
+                        <div class="featured-info">
+                            <span class="featured-badge">Proyek Unggulan</span>
+                            <h2>Smart Factory Automation System</h2>
+                            <p>
+                                Implementasi sistem otomasi pabrik pintar dengan
+                                integrasi IoT, AI, dan sistem kontrol
+                                terdistribusi untuk meningkatkan efisiensi
+                                produksi hingga 40%.
+                            </p>
+                            <div class="project-stats">
+                                <div class="stat">
+                                    <i class="fas fa-industry"></i>
+                                    <span>Manufacturing</span>
+                                </div>
+                                <div class="stat">
+                                    <i class="fas fa-calendar"></i>
+                                    <span>2024</span>
+                                </div>
+                                <div class="stat">
+                                    <i class="fas fa-users"></i>
+                                    <span>15 Engineer</span>
+                                </div>
+                                <div class="stat">
+                                    <i class="fas fa-clock"></i>
+                                    <span>8 Bulan</span>
+                                </div>
+                            </div>
+                            <div class="project-technologies">
+                                <span class="tech-tag">PLC Siemens</span>
+                                <span class="tech-tag">SCADA WinCC</span>
+                                <span class="tech-tag">Industrial IoT</span>
+                                <span class="tech-tag">AI/ML</span>
+                            </div>
+                            <a
+                                href="project-detail.html?id=smart-factory"
+                                class="btn btn-primary"
+                            >
+                                <i class="fas fa-eye"></i>
+                                Lihat Detail Proyek
+                            </a>
+                        </div>
+                        <div class="featured-image">
+                            <div class="project-thumbnail">
+                                <i class="fas fa-industry"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="projects-grid-section">
+                <div class="container">
+                    <div class="projects-grid">
+                        <!-- Manufacturing Projects -->
+                        <div class="project-card" data-category="manufacturing">
+                            <div class="project-image">
+                                <i class="fas fa-conveyor-belt"></i>
+                                <div class="project-overlay">
+                                    <a
+                                        href="project-detail.html?id=conveyor-system"
+                                        class="view-project"
+                                    >
+                                        <i class="fas fa-eye"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <div class="project-category">
+                                    Manufacturing
+                                </div>
+                                <h3>Automated Conveyor System</h3>
+                                <p>
+                                    Sistem conveyor otomatis dengan sensor dan
+                                    kontrol PLC untuk sorting produk berdasarkan
+                                    ukuran dan warna.
+                                </p>
+                                <div class="project-technologies">
+                                    <span class="tech-tag">PLC</span>
+                                    <span class="tech-tag">Sensor</span>
+                                    <span class="tech-tag">Motor Control</span>
+                                </div>
+                                <div class="project-meta">
+                                    <span class="duration"
+                                        ><i class="fas fa-clock"></i> 3
+                                        Bulan</span
+                                    >
+                                    <span class="team"
+                                        ><i class="fas fa-users"></i> 5
+                                        Engineer</span
+                                    >
+                                    <span class="year"
+                                        ><i class="fas fa-calendar"></i>
+                                        2024</span
+                                    >
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-card" data-category="manufacturing">
+                            <div class="project-image">
+                                <i class="fas fa-robot"></i>
+                                <div class="project-overlay">
+                                    <a
+                                        href="project-detail.html?id=robotic-assembly"
+                                        class="view-project"
+                                    >
+                                        <i class="fas fa-eye"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <div class="project-category">Robotics</div>
+                                <h3>Robotic Assembly Line</h3>
+                                <p>
+                                    Implementasi robot industri untuk assembly
+                                    line otomatis dengan vision system dan
+                                    quality control.
+                                </p>
+                                <div class="project-technologies">
+                                    <span class="tech-tag"
+                                        >Industrial Robot</span
+                                    >
+                                    <span class="tech-tag">Vision System</span>
+                                    <span class="tech-tag"
+                                        >Quality Control</span
+                                    >
+                                </div>
+                                <div class="project-meta">
+                                    <span class="duration"
+                                        ><i class="fas fa-clock"></i> 6
+                                        Bulan</span
+                                    >
+                                    <span class="team"
+                                        ><i class="fas fa-users"></i> 8
+                                        Engineer</span
+                                    >
+                                    <span class="year"
+                                        ><i class="fas fa-calendar"></i>
+                                        2023</span
+                                    >
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Process Control Projects -->
+                        <div class="project-card" data-category="process">
+                            <div class="project-image">
+                                <i class="fas fa-thermometer-half"></i>
+                                <div class="project-overlay">
+                                    <a
+                                        href="project-detail.html?id=temperature-control"
+                                        class="view-project"
+                                    >
+                                        <i class="fas fa-eye"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <div class="project-category">
+                                    Process Control
+                                </div>
+                                <h3>Temperature Control System</h3>
+                                <p>
+                                    Sistem kontrol suhu otomatis dengan PID
+                                    controller dan monitoring real-time untuk
+                                    proses kimia.
+                                </p>
+                                <div class="project-technologies">
+                                    <span class="tech-tag">PID Controller</span>
+                                    <span class="tech-tag">SCADA</span>
+                                    <span class="tech-tag">HMI</span>
+                                </div>
+                                <div class="project-meta">
+                                    <span class="duration"
+                                        ><i class="fas fa-clock"></i> 4
+                                        Bulan</span
+                                    >
+                                    <span class="team"
+                                        ><i class="fas fa-users"></i> 6
+                                        Engineer</span
+                                    >
+                                    <span class="year"
+                                        ><i class="fas fa-calendar"></i>
+                                        2024</span
+                                    >
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-card" data-category="process">
+                            <div class="project-image">
+                                <i class="fas fa-flask"></i>
+                                <div class="project-overlay">
+                                    <a
+                                        href="project-detail.html?id=batch-control"
+                                        class="view-project"
+                                    >
+                                        <i class="fas fa-eye"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <div class="project-category">
+                                    Process Control
+                                </div>
+                                <h3>Batch Process Control</h3>
+                                <p>
+                                    Sistem kontrol batch untuk industri farmasi
+                                    dengan recipe management dan audit trail.
+                                </p>
+                                <div class="project-technologies">
+                                    <span class="tech-tag">Batch Control</span>
+                                    <span class="tech-tag"
+                                        >Recipe Management</span
+                                    >
+                                    <span class="tech-tag">Audit Trail</span>
+                                </div>
+                                <div class="project-meta">
+                                    <span class="duration"
+                                        ><i class="fas fa-clock"></i> 8
+                                        Bulan</span
+                                    >
+                                    <span class="team"
+                                        ><i class="fas fa-users"></i> 12
+                                        Engineer</span
+                                    >
+                                    <span class="year"
+                                        ><i class="fas fa-calendar"></i>
+                                        2023</span
+                                    >
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Water Treatment Projects -->
+                        <div class="project-card" data-category="water">
+                            <div class="project-image">
+                                <i class="fas fa-water"></i>
+                                <div class="project-overlay">
+                                    <a
+                                        href="project-detail.html?id=water-treatment"
+                                        class="view-project"
+                                    >
+                                        <i class="fas fa-eye"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <div class="project-category">
+                                    Water Treatment
+                                </div>
+                                <h3>Water Treatment Plant Automation</h3>
+                                <p>
+                                    Otomasi plant pengolahan air dengan multiple
+                                    stage control dan monitoring kualitas air
+                                    real-time.
+                                </p>
+                                <div class="project-technologies">
+                                    <span class="tech-tag"
+                                        >Process Control</span
+                                    >
+                                    <span class="tech-tag"
+                                        >Instrumentation</span
+                                    >
+                                    <span class="tech-tag">Safety System</span>
+                                </div>
+                                <div class="project-meta">
+                                    <span class="duration"
+                                        ><i class="fas fa-clock"></i> 10
+                                        Bulan</span
+                                    >
+                                    <span class="team"
+                                        ><i class="fas fa-users"></i> 15
+                                        Engineer</span
+                                    >
+                                    <span class="year"
+                                        ><i class="fas fa-calendar"></i>
+                                        2023</span
+                                    >
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Energy Projects -->
+                        <div class="project-card" data-category="energy">
+                            <div class="project-image">
+                                <i class="fas fa-solar-panel"></i>
+                                <div class="project-overlay">
+                                    <a
+                                        href="project-detail.html?id=solar-monitoring"
+                                        class="view-project"
+                                    >
+                                        <i class="fas fa-eye"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <div class="project-category">Energy</div>
+                                <h3>Solar Power Monitoring System</h3>
+                                <p>
+                                    Sistem monitoring dan kontrol pembangkit
+                                    listrik tenaga surya dengan prediksi cuaca
+                                    dan optimasi output.
+                                </p>
+                                <div class="project-technologies">
+                                    <span class="tech-tag"
+                                        >Energy Management</span
+                                    >
+                                    <span class="tech-tag">IoT Sensors</span>
+                                    <span class="tech-tag"
+                                        >Weather Prediction</span
+                                    >
+                                </div>
+                                <div class="project-meta">
+                                    <span class="duration"
+                                        ><i class="fas fa-clock"></i> 5
+                                        Bulan</span
+                                    >
+                                    <span class="team"
+                                        ><i class="fas fa-users"></i> 7
+                                        Engineer</span
+                                    >
+                                    <span class="year"
+                                        ><i class="fas fa-calendar"></i>
+                                        2024</span
+                                    >
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-card" data-category="energy">
+                            <div class="project-image">
+                                <i class="fas fa-wind"></i>
+                                <div class="project-overlay">
+                                    <a
+                                        href="project-detail.html?id=wind-turbine"
+                                        class="view-project"
+                                    >
+                                        <i class="fas fa-eye"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <div class="project-category">Energy</div>
+                                <h3>Wind Turbine Control System</h3>
+                                <p>
+                                    Sistem kontrol turbin angin dengan pitch
+                                    control, yaw system, dan condition
+                                    monitoring.
+                                </p>
+                                <div class="project-technologies">
+                                    <span class="tech-tag">Pitch Control</span>
+                                    <span class="tech-tag"
+                                        >Condition Monitoring</span
+                                    >
+                                    <span class="tech-tag"
+                                        >Vibration Analysis</span
+                                    >
+                                </div>
+                                <div class="project-meta">
+                                    <span class="duration"
+                                        ><i class="fas fa-clock"></i> 7
+                                        Bulan</span
+                                    >
+                                    <span class="team"
+                                        ><i class="fas fa-users"></i> 10
+                                        Engineer</span
+                                    >
+                                    <span class="year"
+                                        ><i class="fas fa-calendar"></i>
+                                        2023</span
+                                    >
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Robotics Projects -->
+                        <div class="project-card" data-category="robotics">
+                            <div class="project-image">
+                                <i class="fas fa-hand-rock"></i>
+                                <div class="project-overlay">
+                                    <a
+                                        href="project-detail.html?id=pick-place-robot"
+                                        class="view-project"
+                                    >
+                                        <i class="fas fa-eye"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <div class="project-category">Robotics</div>
+                                <h3>Pick and Place Robot System</h3>
+                                <p>
+                                    Robot pick and place dengan AI vision untuk
+                                    sorting dan packaging produk dengan akurasi
+                                    tinggi.
+                                </p>
+                                <div class="project-technologies">
+                                    <span class="tech-tag">AI Vision</span>
+                                    <span class="tech-tag">Robot Control</span>
+                                    <span class="tech-tag"
+                                        >Machine Learning</span
+                                    >
+                                </div>
+                                <div class="project-meta">
+                                    <span class="duration"
+                                        ><i class="fas fa-clock"></i> 4
+                                        Bulan</span
+                                    >
+                                    <span class="team"
+                                        ><i class="fas fa-users"></i> 6
+                                        Engineer</span
+                                    >
+                                    <span class="year"
+                                        ><i class="fas fa-calendar"></i>
+                                        2024</span
+                                    >
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-card" data-category="manufacturing">
+                            <div class="project-image">
+                                <i class="fas fa-cogs"></i>
+                                <div class="project-overlay">
+                                    <a
+                                        href="project-detail.html?id=predictive-maintenance"
+                                        class="view-project"
+                                    >
+                                        <i class="fas fa-eye"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <div class="project-category">
+                                    Manufacturing
+                                </div>
+                                <h3>Predictive Maintenance System</h3>
+                                <p>
+                                    Sistem prediksi maintenance menggunakan IoT
+                                    sensors dan machine learning untuk mencegah
+                                    downtime.
+                                </p>
+                                <div class="project-technologies">
+                                    <span class="tech-tag">IoT Sensors</span>
+                                    <span class="tech-tag"
+                                        >Machine Learning</span
+                                    >
+                                    <span class="tech-tag"
+                                        >Predictive Analytics</span
+                                    >
+                                </div>
+                                <div class="project-meta">
+                                    <span class="duration"
+                                        ><i class="fas fa-clock"></i> 6
+                                        Bulan</span
+                                    >
+                                    <span class="team"
+                                        ><i class="fas fa-users"></i> 9
+                                        Engineer</span
+                                    >
+                                    <span class="year"
+                                        ><i class="fas fa-calendar"></i>
+                                        2024</span
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="load-more-section">
+                        <button class="btn btn-outline load-more-btn">
+                            <i class="fas fa-plus"></i>
+                            Muat Proyek Lainnya
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="project-stats">
+                <div class="container">
+                    <h2>Statistik Proyek</h2>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-project-diagram"></i>
+                            </div>
+                            <div class="stat-number">150+</div>
+                            <div class="stat-label">Proyek Selesai</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-industry"></i>
+                            </div>
+                            <div class="stat-number">25+</div>
+                            <div class="stat-label">Industri Berbeda</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="stat-number">500+</div>
+                            <div class="stat-label">Engineer Terlibat</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="stat-number">40%</div>
+                            <div class="stat-label">Peningkatan Efisiensi</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="project-cta">
+                <div class="container">
+                    <div class="cta-content">
+                        <h2>Punya Proyek Otomasi?</h2>
+                        <p>
+                            Konsultasikan kebutuhan otomasi industri Anda dengan
+                            tim expert kami
+                        </p>
+                        <div class="cta-buttons">
+                            <a href="contact.html" class="btn btn-primary">
+                                <i class="fas fa-phone"></i>
+                                Konsultasi Gratis
+                            </a>
+                            <a href="#" class="btn btn-outline">
+                                <i class="fas fa-download"></i>
+                                Download Portfolio
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <div class="footer-logo">
+                            <i class="fas fa-cogs"></i>
+                            <span>AutomationEdu</span>
+                        </div>
+                        <p>
+                            Platform pembelajaran otomasi industri terdepan di
+                            Indonesia.
+                        </p>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Pembelajaran</h4>
+                        <ul>
+                            <li><a href="courses.html">Kursus</a></li>
+                            <li><a href="tutorials.html">Tutorial</a></li>
+                            <li><a href="projects.html">Proyek</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Sumber Daya</h4>
+                        <ul>
+                            <li><a href="#">Dokumentasi</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Blog</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Ikuti Kami</h4>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-github"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2024 AutomationEdu. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+        <script src="script.js"></script>
+    </body>
+</html>

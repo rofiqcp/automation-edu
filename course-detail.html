@@ -1,0 +1,531 @@
+<!doctype html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>PLC Programming Fundamentals - AutomationEdu</title>
+        <link rel="stylesheet" href="styles.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <i class="fas fa-cogs"></i>
+                    <span>AutomationEdu</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="courses.html" class="active">Kursus</a></li>
+                    <li><a href="tutorials.html">Tutorial</a></li>
+                    <li><a href="projects.html">Proyek</a></li>
+                    <li><a href="about.html">Tentang</a></li>
+                    <li><a href="contact.html">Kontak</a></li>
+                </ul>
+                <div class="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+
+        <main class="course-detail-page">
+            <section class="course-hero">
+                <div class="container">
+                    <div class="course-hero-content">
+                        <div class="course-info">
+                            <div class="breadcrumb">
+                                <a href="index.html">Beranda</a> >
+                                <a href="courses.html">Kursus</a> >
+                                <span>PLC Programming Fundamentals</span>
+                            </div>
+                            <h1>PLC Programming Fundamentals</h1>
+                            <p class="course-description">
+                                Pelajari dasar-dasar pemrograman PLC
+                                (Programmable Logic Controller) dari nol hingga
+                                mahir. Kursus ini mencakup ladder logic,
+                                function block diagram, dan aplikasi praktis
+                                dalam industri.
+                            </p>
+                            <div class="course-stats">
+                                <div class="stat">
+                                    <i class="fas fa-clock"></i>
+                                    <span>8 Minggu</span>
+                                </div>
+                                <div class="stat">
+                                    <i class="fas fa-signal"></i>
+                                    <span>Pemula</span>
+                                </div>
+                                <div class="stat">
+                                    <i class="fas fa-users"></i>
+                                    <span>1,234 siswa</span>
+                                </div>
+                                <div class="stat">
+                                    <i class="fas fa-star"></i>
+                                    <span>4.8 (456 ulasan)</span>
+                                </div>
+                            </div>
+                            <div class="course-actions">
+                                <button class="btn btn-primary enroll-btn">
+                                    <i class="fas fa-play"></i>
+                                    Mulai Belajar Gratis
+                                </button>
+                                <button class="btn btn-outline bookmark-btn">
+                                    <i class="fas fa-bookmark"></i>
+                                    Simpan
+                                </button>
+                            </div>
+                        </div>
+                        <div class="course-video">
+                            <div class="video-placeholder">
+                                <i class="fas fa-play-circle"></i>
+                                <span>Preview Kursus</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="course-content">
+                <div class="container">
+                    <div class="course-layout">
+                        <div class="course-main">
+                            <div class="course-tabs">
+                                <button
+                                    class="tab-btn active"
+                                    data-tab="overview"
+                                >
+                                    Overview
+                                </button>
+                                <button class="tab-btn" data-tab="curriculum">
+                                    Kurikulum
+                                </button>
+                                <button class="tab-btn" data-tab="instructor">
+                                    Instruktur
+                                </button>
+                                <button class="tab-btn" data-tab="reviews">
+                                    Ulasan
+                                </button>
+                            </div>
+
+                            <div class="tab-content active" id="overview">
+                                <h3>Tentang Kursus Ini</h3>
+                                <p>
+                                    PLC (Programmable Logic Controller) adalah
+                                    komputer industri yang digunakan untuk
+                                    mengotomatisasi proses manufaktur. Dalam
+                                    kursus ini, Anda akan mempelajari:
+                                </p>
+                                <ul>
+                                    <li>Dasar-dasar sistem kontrol industri</li>
+                                    <li>
+                                        Pengenalan hardware dan software PLC
+                                    </li>
+                                    <li>Pemrograman dengan Ladder Logic</li>
+                                    <li>Function Block Diagram (FBD)</li>
+                                    <li>Troubleshooting dan maintenance</li>
+                                    <li>Aplikasi praktis dalam industri</li>
+                                </ul>
+
+                                <h3>Yang Akan Anda Pelajari</h3>
+                                <div class="learning-objectives">
+                                    <div class="objective">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span
+                                            >Memahami konsep dasar sistem
+                                            kontrol otomatis</span
+                                        >
+                                    </div>
+                                    <div class="objective">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span
+                                            >Menguasai pemrograman Ladder
+                                            Logic</span
+                                        >
+                                    </div>
+                                    <div class="objective">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span
+                                            >Mengimplementasikan Function Block
+                                            Diagram</span
+                                        >
+                                    </div>
+                                    <div class="objective">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span
+                                            >Melakukan troubleshooting sistem
+                                            PLC</span
+                                        >
+                                    </div>
+                                </div>
+
+                                <h3>Prasyarat</h3>
+                                <p>
+                                    Kursus ini dirancang untuk pemula, namun
+                                    akan lebih baik jika Anda memiliki:
+                                </p>
+                                <ul>
+                                    <li>Pengetahuan dasar elektronika</li>
+                                    <li>Pemahaman logika dasar</li>
+                                    <li>
+                                        Motivasi untuk belajar teknologi
+                                        industri
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="tab-content" id="curriculum">
+                                <h3>Kurikulum Kursus</h3>
+                                <div class="curriculum-list">
+                                    <div class="module">
+                                        <div class="module-header">
+                                            <h4>Modul 1: Pengenalan PLC</h4>
+                                            <span class="module-duration"
+                                                >1 minggu • 5 video • 2
+                                                jam</span
+                                            >
+                                        </div>
+                                        <div class="lessons">
+                                            <div class="lesson">
+                                                <i
+                                                    class="fas fa-play-circle"
+                                                ></i>
+                                                <span
+                                                    >Sejarah dan Perkembangan
+                                                    PLC</span
+                                                >
+                                                <span class="lesson-duration"
+                                                    >15 menit</span
+                                                >
+                                            </div>
+                                            <div class="lesson">
+                                                <i
+                                                    class="fas fa-play-circle"
+                                                ></i>
+                                                <span
+                                                    >Komponen Hardware PLC</span
+                                                >
+                                                <span class="lesson-duration"
+                                                    >20 menit</span
+                                                >
+                                            </div>
+                                            <div class="lesson">
+                                                <i class="fas fa-file-alt"></i>
+                                                <span
+                                                    >Quiz: Pengenalan PLC</span
+                                                >
+                                                <span class="lesson-duration"
+                                                    >10 menit</span
+                                                >
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="module">
+                                        <div class="module-header">
+                                            <h4>
+                                                Modul 2: Ladder Logic
+                                                Programming
+                                            </h4>
+                                            <span class="module-duration"
+                                                >2 minggu • 8 video • 4
+                                                jam</span
+                                            >
+                                        </div>
+                                        <div class="lessons">
+                                            <div class="lesson">
+                                                <i
+                                                    class="fas fa-play-circle"
+                                                ></i>
+                                                <span
+                                                    >Dasar-dasar Ladder
+                                                    Logic</span
+                                                >
+                                                <span class="lesson-duration"
+                                                    >25 menit</span
+                                                >
+                                            </div>
+                                            <div class="lesson">
+                                                <i
+                                                    class="fas fa-play-circle"
+                                                ></i>
+                                                <span>Contacts dan Coils</span>
+                                                <span class="lesson-duration"
+                                                    >30 menit</span
+                                                >
+                                            </div>
+                                            <div class="lesson">
+                                                <i class="fas fa-code"></i>
+                                                <span
+                                                    >Praktik: Program
+                                                    Sederhana</span
+                                                >
+                                                <span class="lesson-duration"
+                                                    >45 menit</span
+                                                >
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="module">
+                                        <div class="module-header">
+                                            <h4>
+                                                Modul 3: Function Block Diagram
+                                            </h4>
+                                            <span class="module-duration"
+                                                >2 minggu • 6 video • 3
+                                                jam</span
+                                            >
+                                        </div>
+                                    </div>
+
+                                    <div class="module">
+                                        <div class="module-header">
+                                            <h4>Modul 4: Aplikasi Praktis</h4>
+                                            <span class="module-duration"
+                                                >3 minggu • 10 video • 5
+                                                jam</span
+                                            >
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tab-content" id="instructor">
+                                <h3>Instruktur</h3>
+                                <div class="instructor-card">
+                                    <div class="instructor-avatar">
+                                        <i class="fas fa-user-tie"></i>
+                                    </div>
+                                    <div class="instructor-info">
+                                        <h4>Ir. Ahmad Sutanto, M.T.</h4>
+                                        <p class="instructor-title">
+                                            Senior Automation Engineer
+                                        </p>
+                                        <p class="instructor-bio">
+                                            Berpengalaman 15+ tahun di bidang
+                                            otomasi industri. Telah menangani
+                                            proyek-proyek besar di berbagai
+                                            industri manufaktur dan petrokimia.
+                                        </p>
+                                        <div class="instructor-stats">
+                                            <div class="stat">
+                                                <strong>4.9</strong>
+                                                <span>Rating Instruktur</span>
+                                            </div>
+                                            <div class="stat">
+                                                <strong>2,456</strong>
+                                                <span>Ulasan</span>
+                                            </div>
+                                            <div class="stat">
+                                                <strong>15,678</strong>
+                                                <span>Siswa</span>
+                                            </div>
+                                            <div class="stat">
+                                                <strong>12</strong>
+                                                <span>Kursus</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tab-content" id="reviews">
+                                <h3>Ulasan Siswa</h3>
+                                <div class="reviews-summary">
+                                    <div class="rating-overview">
+                                        <div class="average-rating">
+                                            <span class="rating-number"
+                                                >4.8</span
+                                            >
+                                            <div class="stars">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                            <span class="total-reviews"
+                                                >456 ulasan</span
+                                            >
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="reviews-list">
+                                    <div class="review">
+                                        <div class="reviewer-info">
+                                            <div class="reviewer-avatar">
+                                                <i class="fas fa-user"></i>
+                                            </div>
+                                            <div class="reviewer-details">
+                                                <h5>Budi Santoso</h5>
+                                                <div class="review-rating">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class="review-text">
+                                            Kursus yang sangat bagus untuk
+                                            pemula. Penjelasan sangat detail dan
+                                            mudah dipahami. Sekarang saya sudah
+                                            bisa membuat program PLC sederhana.
+                                        </p>
+                                    </div>
+
+                                    <div class="review">
+                                        <div class="reviewer-info">
+                                            <div class="reviewer-avatar">
+                                                <i class="fas fa-user"></i>
+                                            </div>
+                                            <div class="reviewer-details">
+                                                <h5>Sari Indah</h5>
+                                                <div class="review-rating">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class="review-text">
+                                            Materi lengkap dan praktis.
+                                            Instruktur berpengalaman dan
+                                            responsif dalam menjawab pertanyaan.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="course-sidebar">
+                            <div class="course-card-sidebar">
+                                <div class="price-section">
+                                    <div class="price">Gratis</div>
+                                    <div class="original-price">
+                                        Rp 2.500.000
+                                    </div>
+                                </div>
+                                <button class="btn btn-primary full-width">
+                                    <i class="fas fa-play"></i>
+                                    Mulai Belajar Sekarang
+                                </button>
+                                <div class="course-includes">
+                                    <h4>Kursus ini termasuk:</h4>
+                                    <ul>
+                                        <li>
+                                            <i class="fas fa-video"></i> 29
+                                            video pembelajaran
+                                        </li>
+                                        <li>
+                                            <i class="fas fa-file-alt"></i> 15
+                                            artikel
+                                        </li>
+                                        <li>
+                                            <i class="fas fa-download"></i> 8
+                                            resource download
+                                        </li>
+                                        <li>
+                                            <i class="fas fa-mobile-alt"></i>
+                                            Akses mobile & desktop
+                                        </li>
+                                        <li>
+                                            <i class="fas fa-infinity"></i>
+                                            Akses seumur hidup
+                                        </li>
+                                        <li>
+                                            <i class="fas fa-certificate"></i>
+                                            Sertifikat penyelesaian
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="related-courses">
+                                <h4>Kursus Terkait</h4>
+                                <div class="related-course">
+                                    <div class="course-thumb">
+                                        <i class="fas fa-network-wired"></i>
+                                    </div>
+                                    <div class="course-info">
+                                        <h5>SCADA Systems Design</h5>
+                                        <span class="course-level"
+                                            >Menengah</span
+                                        >
+                                    </div>
+                                </div>
+                                <div class="related-course">
+                                    <div class="course-thumb">
+                                        <i class="fas fa-desktop"></i>
+                                    </div>
+                                    <div class="course-info">
+                                        <h5>HMI Development</h5>
+                                        <span class="course-level"
+                                            >Menengah</span
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <div class="footer-logo">
+                            <i class="fas fa-cogs"></i>
+                            <span>AutomationEdu</span>
+                        </div>
+                        <p>
+                            Platform pembelajaran otomasi industri terdepan di
+                            Indonesia.
+                        </p>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Pembelajaran</h4>
+                        <ul>
+                            <li><a href="courses.html">Kursus</a></li>
+                            <li><a href="tutorials.html">Tutorial</a></li>
+                            <li><a href="projects.html">Proyek</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Sumber Daya</h4>
+                        <ul>
+                            <li><a href="#">Dokumentasi</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Blog</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Ikuti Kami</h4>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-github"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2024 AutomationEdu. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+        <script src="script.js"></script>
+    </body>
+</html>
