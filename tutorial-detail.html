@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Detail Tutorial - AutomationEdu</title>
+        <link rel="stylesheet" href="styles.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        />
+    </head>
+    <body>
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <a href="index.html">
+                        <i class="fas fa-cogs"></i>
+                        AutomationEdu
+                    </a>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="courses.html" class="nav-link">Kursus</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="tutorials.html" class="nav-link active">Tutorial</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="projects.html" class="nav-link">Proyek</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">Tentang</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link">Kontak</a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Tutorial Detail Hero -->
+        <section class="tutorial-hero">
+            <div class="container">
+                <div class="breadcrumb">
+                    <a href="index.html">Beranda</a>
+                    <i class="fas fa-chevron-right"></i>
+                    <a href="tutorials.html">Tutorial</a>
+                    <i class="fas fa-chevron-right"></i>
+                    <span id="tutorial-breadcrumb">Detail Tutorial</span>
+                </div>
+                <div class="tutorial-header">
+                    <div class="tutorial-icon">
+                        <i id="tutorial-icon" class="fas fa-book"></i>
+                    </div>
+                    <div class="tutorial-info">
+                        <h1 id="tutorial-title">Judul Tutorial</h1>
+                        <p id="tutorial-subtitle">Deskripsi singkat tutorial</p>
+                        <div class="tutorial-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-clock"></i>
+                                <span id="tutorial-duration">-</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-signal"></i>
+                                <span id="tutorial-level">-</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-eye"></i>
+                                <span id="tutorial-views">-</span>
+                            </div>
+                        </div>
+                        <div class="tutorial-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" id="progress-fill"></div>
+                            </div>
+                            <span class="progress-text">Progress: <span id="progress-percent">0%</span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tutorial Content -->
+        <section class="tutorial-content">
+            <div class="container">
+                <div class="content-grid">
+                    <div class="main-content">
+                        <!-- Tutorial Navigation -->
+                        <div class="tutorial-nav">
+                            <button class="nav-btn prev-btn" id="prev-btn" disabled>
+                                <i class="fas fa-chevron-left"></i>
+                                Sebelumnya
+                            </button>
+                            <span class="chapter-indicator">
+                                Bab <span id="current-chapter">1</span> dari <span id="total-chapters">5</span>
+                            </span>
+                            <button class="nav-btn next-btn" id="next-btn">
+                                Selanjutnya
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                        </div>
+
+                        <!-- Tutorial Chapter Content -->
+                        <div class="chapter-content" id="chapter-content">
+                            <!-- Dynamic content will be loaded here -->
+                        </div>
+
+                        <!-- Tutorial Actions -->
+                        <div class="tutorial-actions">
+                            <button class="btn btn-secondary" id="bookmark-btn">
+                                <i class="fas fa-bookmark"></i>
+                                Bookmark
+                            </button>
+                            <button class="btn btn-primary" id="complete-btn">
+                                <i class="fas fa-check"></i>
+                                Selesai
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Sidebar -->
+                    <div class="sidebar">
+                        <!-- Table of Contents -->
+                        <div class="sidebar-card">
+                            <h3><i class="fas fa-list"></i> Daftar Isi</h3>
+                            <div id="table-of-contents" class="toc-list">
+                                <!-- Dynamic content -->
+                            </div>
+                        </div>
+
+                        <!-- Tutorial Info -->
+                        <div class="sidebar-card">
+                            <h3><i class="fas fa-info-circle"></i> Info Tutorial</h3>
+                            <div class="info-list">
+                                <div class="info-item">
+                                    <strong>Kategori:</strong>
+                                    <span id="tutorial-category">-</span>
+                                </div>
+                                <div class="info-item">
+                                    <strong>Dibuat:</strong>
+                                    <span id="tutorial-date">-</span>
+                                </div>
+                                <div class="info-item">
+                                    <strong>Diperbarui:</strong>
+                                    <span id="tutorial-updated">-</span>
+                                </div>
+                                <div class="info-item">
+                                    <strong>Rating:</strong>
+                                    <div class="rating-stars" id="tutorial-rating">
+                                        <!-- Stars will be generated -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Related Tutorials -->
+                        <div class="sidebar-card">
+                            <h3><i class="fas fa-graduation-cap"></i> Tutorial Terkait</h3>
+                            <div id="related-tutorials" class="related-list">
+                                <!-- Dynamic content -->
+                            </div>
+                        </div>
+
+                        <!-- Download Resources -->
+                        <div class="sidebar-card">
+                            <h3><i class="fas fa-download"></i> Resources</h3>
+                            <div class="download-buttons">
+                                <button class="btn btn-primary btn-block">
+                                    <i class="fas fa-file-pdf"></i>
+                                    PDF Tutorial
+                                </button>
+                                <button class="btn btn-secondary btn-block">
+                                    <i class="fas fa-code"></i>
+                                    Sample Code
+                                </button>
+                                <button class="btn btn-secondary btn-block">
+                                    <i class="fas fa-video"></i>
+                                    Video
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <div class="footer-logo">
+                            <i class="fas fa-cogs"></i>
+                            <span>AutomationEdu</span>
+                        </div>
+                        <p>
+                            Platform pembelajaran otomasi industri terdepan di
+                            Indonesia. Bergabunglah dengan ribuan engineer yang
+                            telah mempercayai kami.
+                        </p>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="courses.html">Kursus</a></li>
+                            <li><a href="tutorials.html">Tutorial</a></li>
+                            <li><a href="projects.html">Proyek</a></li>
+                            <li><a href="about.html">Tentang Kami</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Kontak</h3>
+                        <div class="contact-info">
+                            <p>
+                                <i class="fas fa-envelope"></i>
+                                info@automationedu.com
+                            </p>
+                            <p>
+                                <i class="fas fa-phone"></i>
+                                +62 21 1234 5678
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2024 AutomationEdu. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+        <script src="script.js"></script>
+        <script>
+            // Tutorial data
+            const tutorialData = {
+                'plc-setup': {
+                    title: 'Setup dan Konfigurasi PLC',
+                    subtitle: 'Panduan lengkap setup PLC dari awal hingga siap digunakan',
+                    icon: 'fas fa-microchip',
+                    duration: '45 menit',
+                    level: 'Beginner',
+                    views: 15420,
+                    category: 'PLC Programming',
+                    date: '15 Januari 2024',
+                    updated: '20 Februari 2024',
+                    rating: 4.7,
+                    chapters: [
+                        {
+                            title: 'Pengenalan PLC',
+                            content: `
+                                <h2>Apa itu PLC?</h2>
+                                <p>Programmable Logic Controller (PLC) adalah komputer industri yang dirancang khusus untuk mengontrol proses manufaktur dan otomasi industri.</p>
+                                
+                                <h3>Komponen Utama PLC:</h3>
+                                <ul>
+                                    <li><strong>CPU (Central Processing Unit):</strong> Otak dari PLC yang menjalankan program</li>
+                                    <li><strong>Input Modules:</strong> Menerima sinyal dari sensor dan switch</li>
+                                    <li><strong>Output Modules:</strong> Mengirim sinyal ke actuator dan device lain</li>
+                                    <li><strong>Power Supply:</strong> Menyediakan daya untuk sistem</li>
+                                </ul>
+
+                                <div class="info-box">
+                                    <i class="fas fa-lightbulb"></i>
+                                    <p><strong>Tips:</strong> Selalu pastikan spesifikasi PLC sesuai dengan kebutuhan aplikasi Anda sebelum melakukan pembelian.</p>
+                                </div>
+                            `
+                        },
+                        {
+                            title: 'Persiapan Hardware',
+                            content: `
+                                <h2>Persiapan Hardware PLC</h2>
+                                <p>Sebelum memulai programming, pastikan semua hardware telah terpasang dengan benar.</p>
+                                
+                                <h3>Checklist Instalasi:</h3>
+                                <div class="checklist">
+                                    <label><input type="checkbox"> PLC terpasang di panel dengan benar</label>
+                                    <label><input type="checkbox"> Power supply terhubung (24VDC)</label>
+                                    <label><input type="checkbox"> Kabel komunikasi terpasang</label>
+                                    <label><input type="checkbox"> Input/Output wiring sesuai diagram</label>
+                                    <label><input type="checkbox"> Grounding sistem terpasang</label>
+                                </div>
+
+                                <h3>Wiring Diagram:</h3>
+                                <div class="code-block">
+                                    <pre>
+Input Wiring:
+I0.0 - Start Button (NO)
+I0.1 - Stop Button (NC)  
+I0.2 - Emergency Stop (NC)
+I0.3 - Sensor 1 (NO)
+
+Output Wiring:
+Q0.0 - Motor Contactor
+Q0.1 - Indicator Lamp
+Q0.2 - Alarm Buzzer
+                                    </pre>
+                                </div>
+                            `
+                        },
+                        {
+                            title: 'Software Installation',
+                            content: `
+                                <h2>Instalasi Software Programming</h2>
+                                <p>Untuk programming PLC, kita membutuhkan software khusus dari manufacturer.</p>
+                                
+                                <h3>Software yang Umum Digunakan:</h3>
+                                <div class="software-grid">
+                                    <div class="software-item">
+                                        <i class="fas fa-desktop"></i>
+                                        <h4>TIA Portal (Siemens)</h4>
+                                        <p>Untuk PLC Siemens S7-1200/1500</p>
+                                    </div>
+                                    <div class="software-item">
+                                        <i class="fas fa-desktop"></i>
+                                        <h4>Studio 5000 (Rockwell)</h4>
+                                        <p>Untuk PLC Allen Bradley</p>
+                                    </div>
+                                    <div class="software-item">
+                                        <i class="fas fa-desktop"></i>
+                                        <h4>GX Works (Mitsubishi)</h4>
+                                        <p>Untuk PLC Mitsubishi FX/Q Series</p>
+                                    </div>
+                                </div>
+
+                                <div class="warning-box">
+                                    <i class="fas fa-exclamation-triangle"></i>
+                                    <p><strong>Perhatian:</strong> Pastikan versi software kompatibel dengan hardware PLC yang digunakan.</p>
+                                </div>
+                            `
+                        },
+                        {
+                            title: 'Konfigurasi Komunikasi',
+                            content: `
+                                <h2>Setup Komunikasi PLC</h2>
+                                <p>Langkah penting untuk menghubungkan komputer dengan PLC.</p>
+                                
+                                <h3>Konfigurasi IP Address:</h3>
+                                <div class="code-block">
+                                    <div class="code-header">
+                                        <span>Network Configuration</span>
+                                    </div>
+                                    <pre>
+PLC IP Address: 192.168.1.10
+Subnet Mask: 255.255.255.0
+Gateway: 192.168.1.1
+
+PC IP Address: 192.168.1.100
+Subnet Mask: 255.255.255.0
+                                    </pre>
+                                </div>
+
+                                <h3>Test Koneksi:</h3>
+                                <ol>
+                                    <li>Buka Command Prompt</li>
+                                    <li>Ketik: <code>ping 192.168.1.10</code></li>
+                                    <li>Pastikan mendapat reply dari PLC</li>
+                                    <li>Jika timeout, cek kabel dan setting IP</li>
+                                </ol>
+                            `
+                        },
+                        {
+                            title: 'Program Pertama',
+                            content: `
+                                <h2>Membuat Program PLC Pertama</h2>
+                                <p>Mari buat program sederhana untuk mengontrol motor dengan start/stop button.</p>
+                                
+                                <h3>Logic Diagram:</h3>
+                                <div class="logic-diagram">
+                                    <p>Start Button (I0.0) → Motor (Q0.0)</p>
+                                    <p>Stop Button (I0.1) → Motor OFF</p>
+                                </div>
+
+                                <h3>Ladder Logic:</h3>
+                                <div class="code-block">
+                                    <div class="code-header">
+                                        <span>Main Program (OB1)</span>
+                                        <button class="copy-btn" onclick="copyTutorialCode(this)">
+                                            <i class="fas fa-copy"></i> Copy
+                                        </button>
+                                    </div>
+                                    <pre><code>
+Network 1: Motor Control
+|--[ I0.0 ]--+--[ / I0.1 ]--( Q0.0 )--|
+|            |                         |
+|--[ Q0.0 ]--+                         |
+
+Network 2: Indicator Lamp  
+|--[ Q0.0 ]------------------( Q0.1 )--|
+                                    </code></pre>
+                                </div>
+
+                                <div class="success-box">
+                                    <i class="fas fa-check-circle"></i>
+                                    <p><strong>Selamat!</strong> Anda telah berhasil membuat program PLC pertama. Download dan test program ke PLC.</p>
+                                </div>
+                            `
+                        }
+                    ]
+                },
+                'ladder-logic-basics': {
+                    title: 'Dasar-dasar Ladder Logic',
+                    subtitle: 'Memahami konsep fundamental ladder logic programming',
+                    icon: 'fas fa-project-diagram',
+                    duration: '60 menit',
+                    level: 'Beginner',
+                    views: 12350,
+                    category: 'PLC Programming',
+                    date: '10 Januari 2024',
+                    updated: '25 Februari 2024',
+                    rating: 4.8,
+                    chapters: [
+                        {
+                            title: 'Konsep Ladder Logic',
+                            content: `
+                                <h2>Apa itu Ladder Logic?</h2>
+                                <p>Ladder Logic adalah bahasa pemrograman visual yang menyerupai diagram relay elektrik tradisional.</p>
+                                
+                                <h3>Keunggulan Ladder Logic:</h3>
+                                <ul>
+                                    <li>Mudah dipahami oleh teknisi elektrik</li>
+                                    <li>Visual dan intuitif</li>
+                                    <li>Standar industri yang luas</li>
+                                    <li>Debugging yang mudah</li>
+                                </ul>
+                            `
+                        }
+                        // Add more chapters...
+                    ]
+                },
+                'function-block': {
+                    title: 'Function Block Programming',
+                    subtitle: 'Memahami dan menggunakan Function Block dalam PLC',
+                    icon: 'fas fa-cubes',
+                    duration: '90 menit',
+                    level: 'Intermediate',
+                    views: 8750,
+                    category: 'PLC Programming',
+                    date: '5 Februari 2024',
+                    updated: '1 Maret 2024',
+                    rating: 4.6,
+                    chapters: [
+                        {
+                            title: 'Pengenalan Function Block',
+                            content: `
+                                <h2>Apa itu Function Block?</h2>
+                                <p>Function Block adalah unit program yang dapat digunakan berulang kali dengan input dan output yang terdefinisi.</p>
+                                
+                                <h3>Keuntungan Function Block:</h3>
+                                <ul>
+                                    <li>Reusability - dapat digunakan berulang</li>
+                                    <li>Modular programming</li>
+                                    <li>Easier maintenance</li>
+                                    <li>Standardization</li>
+                                </ul>
+
+                                <div class="info-box">
+                                    <i class="fas fa-lightbulb"></i>
+                                    <p><strong>Tips:</strong> Function Block sangat berguna untuk operasi yang sering digunakan seperti PID control, timer, counter, dll.</p>
+                                </div>
+                            `
+                        },
+                        {
+                            title: 'Membuat Function Block',
+                            content: `
+                                <h2>Langkah Membuat Function Block</h2>
+                                <p>Mari belajar cara membuat Function Block sederhana untuk motor control.</p>
+                                
+                                <h3>Input/Output Definition:</h3>
+                                <div class="code-block">
+                                    <div class="code-header">
+                                        <span>Motor Control FB Interface</span>
+                                    </div>
+                                    <pre>
+FUNCTION_BLOCK FB_MotorControl
+VAR_INPUT
+    Start : BOOL;
+    Stop : BOOL;
+    Reset : BOOL;
+END_VAR
+
+VAR_OUTPUT
+    Motor_Run : BOOL;
+    Motor_Fault : BOOL;
+    Run_Hours : REAL;
+END_VAR
+
+VAR
+    Internal_Timer : TON;
+    Fault_Memory : BOOL;
+END_VAR
+                                    </pre>
+                                </div>
+                            `
+                        },
+                        {
+                            title: 'Logic Implementation',
+                            content: `
+                                <h2>Implementasi Logic Function Block</h2>
+                                
+                                <div class="code-block">
+                                    <div class="code-header">
+                                        <span>Motor Control Logic</span>
+                                        <button class="copy-btn" onclick="copyTutorialCode(this)">
+                                            <i class="fas fa-copy"></i> Copy
+                                        </button>
+                                    </div>
+                                    <pre><code>
+// Motor Start/Stop Logic
+IF Start AND NOT Stop AND NOT Fault_Memory THEN
+    Motor_Run := TRUE;
+END_IF;
+
+IF Stop OR Fault_Memory THEN
+    Motor_Run := FALSE;
+END_IF;
+
+// Reset Fault
+IF Reset THEN
+    Fault_Memory := FALSE;
+END_IF;
+
+// Run Hours Calculation
+Internal_Timer(IN := Motor_Run, PT := T#1H);
+IF Internal_Timer.Q THEN
+    Run_Hours := Run_Hours + 1.0;
+    Internal_Timer(IN := FALSE);
+END_IF;
+
+// Output Assignment
+Motor_Fault := Fault_Memory;
+                                    </code></pre>
+                                </div>
+                            `
+                        }
+                    ]
+                },
+                'scada-dashboard': {
+                    title: 'SCADA Dashboard Design',
+                    subtitle: 'Merancang dashboard SCADA yang efektif dan user-friendly',
+                    icon: 'fas fa-desktop',
+                    duration: '120 menit',
+                    level: 'Intermediate',
+                    views: 6890,
+                    category: 'HMI/SCADA',
+                    date: '12 Februari 2024',
+                    updated: '5 Maret 2024',
+                    rating: 4.8,
+                    chapters: [
+                        {
+                            title: 'Prinsip Desain SCADA',
+                            content: `
+                                <h2>Prinsip Dasar Desain SCADA</h2>
+                                <p>Dashboard SCADA yang baik harus memenuhi prinsip usability dan functionality.</p>
+                                
+                                <h3>Prinsip Desain:</h3>
+                                <ul>
+                                    <li><strong>Clarity:</strong> Informasi mudah dibaca dan dipahami</li>
+                                    <li><strong>Consistency:</strong> Konsisten dalam layout dan warna</li>
+                                    <li><strong>Efficiency:</strong> Akses cepat ke informasi penting</li>
+                                    <li><strong>Safety:</strong> Indikasi alarm yang jelas</li>
+                                </ul>
+
+                                <div class="warning-box">
+                                    <i class="fas fa-exclamation-triangle"></i>
+                                    <p><strong>Perhatian:</strong> Hindari penggunaan warna merah dan hijau bersamaan untuk user yang color blind.</p>
+                                </div>
+                            `
+                        },
+                        {
+                            title: 'Layout dan Navigation',
+                            content: `
+                                <h2>Desain Layout Dashboard</h2>
+                                <p>Layout yang baik memudahkan operator dalam monitoring dan control.</p>
+                                
+                                <h3>Struktur Layout:</h3>
+                                <div class="software-grid">
+                                    <div class="software-item">
+                                        <i class="fas fa-th-large"></i>
+                                        <h4>Overview Screen</h4>
+                                        <p>Dashboard utama dengan KPI dan status general</p>
+                                    </div>
+                                    <div class="software-item">
+                                        <i class="fas fa-cogs"></i>
+                                        <h4>Process Screens</h4>
+                                        <p>Detail monitoring untuk setiap proses</p>
+                                    </div>
+                                    <div class="software-item">
+                                        <i class="fas fa-exclamation-triangle"></i>
+                                        <h4>Alarm Screen</h4>
+                                        <p>Dedicated screen untuk alarm management</p>
+                                    </div>
+                                </div>
+                            `
+                        }
+                    ]
+                }
+            };
+
+            let currentTutorial = null;
+            let currentChapter = 0;
+
+            // Load tutorial data
+            function loadTutorialData() {
+                const urlParams = new URLSearchParams(window.location.search);
+                const tutorialId = urlParams.get('id');
+                currentTutorial = tutorialData[tutorialId];
+
+                if (currentTutorial) {
+                    // Update page content
+                    document.getElementById('tutorial-breadcrumb').textContent = currentTutorial.title;
+                    document.getElementById('tutorial-icon').className = currentTutorial.icon;
+                    document.getElementById('tutorial-title').textContent = currentTutorial.title;
+                    document.getElementById('tutorial-subtitle').textContent = currentTutorial.subtitle;
+                    document.getElementById('tutorial-duration').textContent = currentTutorial.duration;
+                    document.getElementById('tutorial-level').textContent = currentTutorial.level;
+                    document.getElementById('tutorial-views').textContent = currentTutorial.views.toLocaleString();
+                    document.getElementById('tutorial-category').textContent = currentTutorial.category;
+                    document.getElementById('tutorial-date').textContent = currentTutorial.date;
+                    document.getElementById('tutorial-updated').textContent = currentTutorial.updated;
+                    document.getElementById('total-chapters').textContent = currentTutorial.chapters.length;
+
+                    // Generate rating stars
+                    generateRatingStars(currentTutorial.rating);
+
+                    // Generate table of contents
+                    generateTableOfContents();
+
+                    // Load first chapter
+                    loadChapter(0);
+
+                    // Load related tutorials
+                    loadRelatedTutorials(tutorialId);
+
+                    // Update page title
+                    document.title = `${currentTutorial.title} - AutomationEdu`;
+                } else {
+                    // Tutorial not found
+                    document.getElementById('tutorial-title').textContent = 'Tutorial Tidak Ditemukan';
+                    document.getElementById('tutorial-subtitle').textContent = 'Maaf, tutorial yang Anda cari tidak tersedia.';
+                }
+            }
+
+            // Load related tutorials
+            function loadRelatedTutorials(currentTutorialId) {
+                const relatedContainer = document.getElementById('related-tutorials');
+                const allTutorials = Object.keys(tutorialData).filter(id => id !== currentTutorialId);
+                const relatedTutorials = allTutorials.slice(0, 3); // Show 3 related tutorials
+
+                relatedContainer.innerHTML = relatedTutorials.map(tutorialId => {
+                    const tutorial = tutorialData[tutorialId];
+                    return `
+                        <div class="related-item" onclick="window.location.href='tutorial-detail.html?id=${tutorialId}'">
+                            <h4>${tutorial.title}</h4>
+                            <p>${tutorial.subtitle}</p>
+                        </div>
+                    `;
+                }).join('');
+            }
+
+            // Generate rating stars
+            function generateRatingStars(rating) {
+                const ratingContainer = document.getElementById('tutorial-rating');
+                const fullStars = Math.floor(rating);
+                const hasHalfStar = rating % 1 !== 0;
+                let starsHTML = '';
+
+                for (let i = 0; i < fullStars; i++) {
+                    starsHTML += '<i class="fas fa-star"></i>';
+                }
+
+                if (hasHalfStar) {
+                    starsHTML += '<i class="fas fa-star-half-alt"></i>';
+                }
+
+                const emptyStars = 5 - Math.ceil(rating);
+                for (let i = 0; i < emptyStars; i++) {
+                    starsHTML += '<i class="far fa-star"></i>';
+                }
+
+                starsHTML += `<span class="rating-text">${rating}/5</span>`;
+                ratingContainer.innerHTML = starsHTML;
+            }
+
+            // Generate table of contents
+            function generateTableOfContents() {
+                const tocContainer = document.getElementById('table-of-contents');
+                const chapters = currentTutorial.chapters;
+
+                tocContainer.innerHTML = chapters.map((chapter, index) => `
+                    <div class="toc-item ${index === currentChapter ? 'active' : ''}" onclick="loadChapter(${index})">
+                        <div class="toc-number">${index + 1}</div>
+                        <div class="toc-title">${chapter.title}</div>
+                    </div>
+                `).join('');
+            }
+
+            // Load specific chapter
+            function loadChapter(chapterIndex) {
+                if (chapterIndex < 0 || chapterIndex >= currentTutorial.chapters.length) return;
+
+                currentChapter = chapterIndex;
+                const chapter = currentTutorial.chapters[chapterIndex];
+
+                // Update chapter content
+                document.getElementById('chapter-content').innerHTML = chapter.content;
+                document.getElementById('current-chapter').textContent = chapterIndex + 1;
+
+                // Update navigation buttons
+                document.getElementById('prev-btn').disabled = chapterIndex === 0;
+                document.getElementById('next-btn').disabled = chapterIndex === currentTutorial.chapters.length - 1;
+
+                // Update progress
+                const progress = ((chapterIndex + 1) / currentTutorial.chapters.length) * 100;
+                document.getElementById('progress-fill').style.width = progress + '%';
+                document.getElementById('progress-percent').textContent = Math.round(progress) + '%';
+
+                // Update table of contents
+                generateTableOfContents();
+
+                // Scroll to top
+                document.querySelector('.tutorial-content').scrollIntoView({ behavior: 'smooth' });
+            }
+
+            // Navigation functions
+            function nextChapter() {
+                loadChapter(currentChapter + 1);
+            }
+
+            function prevChapter() {
+                loadChapter(currentChapter - 1);
+            }
+
+            // Copy code function
+            function copyTutorialCode(button) {
+                const codeBlock = button.closest('.code-block').querySelector('code');
+                navigator.clipboard.writeText(codeBlock.textContent);
+                
+                button.innerHTML = '<i class="fas fa-check"></i> Copied!';
+                setTimeout(() => {
+                    button.innerHTML = '<i class="fas fa-copy"></i> Copy';
+                }, 2000);
+            }
+
+            // Event listeners
+            document.addEventListener('DOMContentLoaded', () => {
+                loadTutorialData();
+
+                // Navigation buttons
+                document.getElementById('next-btn').addEventListener('click', nextChapter);
+                document.getElementById('prev-btn').addEventListener('click', prevChapter);
+
+                // Bookmark button
+                document.getElementById('bookmark-btn').addEventListener('click', () => {
+                    const btn = document.getElementById('bookmark-btn');
+                    btn.classList.toggle('bookmarked');
+                    if (btn.classList.contains('bookmarked')) {
+                        btn.innerHTML = '<i class="fas fa-bookmark"></i> Bookmarked';
+                    } else {
+                        btn.innerHTML = '<i class="fas fa-bookmark"></i> Bookmark';
+                    }
+                });
+
+                // Complete button
+                document.getElementById('complete-btn').addEventListener('click', () => {
+                    alert('Tutorial selesai! Sertifikat akan dikirim ke email Anda.');
+                });
+            });
+        </script>
+    </body>
+</html>

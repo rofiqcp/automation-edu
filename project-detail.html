@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Detail Proyek - AutomationEdu</title>
+        <link rel="stylesheet" href="styles.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        />
+    </head>
+    <body>
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <a href="index.html">
+                        <i class="fas fa-cogs"></i>
+                        AutomationEdu
+                    </a>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="courses.html" class="nav-link">Kursus</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="tutorials.html" class="nav-link">Tutorial</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="projects.html" class="nav-link active">Proyek</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">Tentang</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link">Kontak</a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Project Detail Hero -->
+        <section class="project-hero">
+            <div class="container">
+                <div class="breadcrumb">
+                    <a href="index.html">Beranda</a>
+                    <i class="fas fa-chevron-right"></i>
+                    <a href="projects.html">Proyek</a>
+                    <i class="fas fa-chevron-right"></i>
+                    <span id="project-breadcrumb">Detail Proyek</span>
+                </div>
+                <div class="project-header">
+                    <div class="project-icon">
+                        <i id="project-icon" class="fas fa-cogs"></i>
+                    </div>
+                    <div class="project-info">
+                        <h1 id="project-title">Judul Proyek</h1>
+                        <p id="project-subtitle">Deskripsi singkat proyek</p>
+                        <div class="project-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-clock"></i>
+                                <span id="project-duration">-</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-signal"></i>
+                                <span id="project-difficulty">-</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-users"></i>
+                                <span id="project-team">-</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Content -->
+        <section class="project-content">
+            <div class="container">
+                <div class="content-grid">
+                    <div class="main-content">
+                        <!-- Project Overview -->
+                        <div class="content-section">
+                            <h2><i class="fas fa-info-circle"></i> Gambaran Umum</h2>
+                            <div id="project-overview" class="content-text">
+                                <p>Loading...</p>
+                            </div>
+                        </div>
+
+                        <!-- Technologies Used -->
+                        <div class="content-section">
+                            <h2><i class="fas fa-tools"></i> Teknologi yang Digunakan</h2>
+                            <div id="project-technologies" class="tech-grid">
+                                <!-- Dynamic content -->
+                            </div>
+                        </div>
+
+                        <!-- Project Features -->
+                        <div class="content-section">
+                            <h2><i class="fas fa-star"></i> Fitur Utama</h2>
+                            <div id="project-features" class="features-list">
+                                <!-- Dynamic content -->
+                            </div>
+                        </div>
+
+                        <!-- Implementation Steps -->
+                        <div class="content-section">
+                            <h2><i class="fas fa-list-ol"></i> Langkah Implementasi</h2>
+                            <div id="project-steps" class="steps-container">
+                                <!-- Dynamic content -->
+                            </div>
+                        </div>
+
+                        <!-- Code Examples -->
+                        <div class="content-section">
+                            <h2><i class="fas fa-code"></i> Contoh Kode</h2>
+                            <div id="project-code" class="code-examples">
+                                <!-- Dynamic content -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sidebar -->
+                    <div class="sidebar">
+                        <!-- Project Stats -->
+                        <div class="sidebar-card">
+                            <h3><i class="fas fa-chart-bar"></i> Statistik Proyek</h3>
+                            <div class="stats-grid">
+                                <div class="stat-item">
+                                    <div class="stat-number" id="project-views">0</div>
+                                    <div class="stat-label">Views</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-number" id="project-downloads">0</div>
+                                    <div class="stat-label">Downloads</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-number" id="project-rating">0</div>
+                                    <div class="stat-label">Rating</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Related Projects -->
+                        <div class="sidebar-card">
+                            <h3><i class="fas fa-project-diagram"></i> Proyek Terkait</h3>
+                            <div id="related-projects" class="related-list">
+                                <!-- Dynamic content -->
+                            </div>
+                        </div>
+
+                        <!-- Download Resources -->
+                        <div class="sidebar-card">
+                            <h3><i class="fas fa-download"></i> Unduh Resources</h3>
+                            <div class="download-buttons">
+                                <button class="btn btn-primary btn-block">
+                                    <i class="fas fa-file-code"></i>
+                                    Source Code
+                                </button>
+                                <button class="btn btn-secondary btn-block">
+                                    <i class="fas fa-file-pdf"></i>
+                                    Dokumentasi
+                                </button>
+                                <button class="btn btn-secondary btn-block">
+                                    <i class="fas fa-video"></i>
+                                    Video Tutorial
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <div class="footer-logo">
+                            <i class="fas fa-cogs"></i>
+                            <span>AutomationEdu</span>
+                        </div>
+                        <p>
+                            Platform pembelajaran otomasi industri terdepan di
+                            Indonesia. Bergabunglah dengan ribuan engineer yang
+                            telah mempercayai kami.
+                        </p>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="courses.html">Kursus</a></li>
+                            <li><a href="tutorials.html">Tutorial</a></li>
+                            <li><a href="projects.html">Proyek</a></li>
+                            <li><a href="about.html">Tentang Kami</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Kontak</h3>
+                        <div class="contact-info">
+                            <p>
+                                <i class="fas fa-envelope"></i>
+                                info@automationedu.com
+                            </p>
+                            <p>
+                                <i class="fas fa-phone"></i>
+                                +62 21 1234 5678
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2024 AutomationEdu. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+        <script src="script.js"></script>
+        <script>
+            // Project data
+            const projectData = {
+                'smart-factory': {
+                    title: 'Smart Factory IoT System',
+                    subtitle: 'Sistem monitoring dan kontrol pabrik pintar berbasis IoT',
+                    icon: 'fas fa-industry',
+                    duration: '6-8 bulan',
+                    difficulty: 'Advanced',
+                    team: '5-8 orang',
+                    overview: `
+                        <p>Smart Factory IoT System adalah proyek komprehensif yang mengintegrasikan teknologi Internet of Things (IoT) dengan sistem otomasi industri untuk menciptakan pabrik pintar yang efisien dan terhubung.</p>
+                        <p>Sistem ini memungkinkan monitoring real-time, prediksi maintenance, dan optimasi proses produksi melalui dashboard terpusat yang dapat diakses dari mana saja.</p>
+                        <p>Proyek ini cocok untuk perusahaan manufaktur yang ingin meningkatkan efisiensi operasional dan mengurangi downtime melalui implementasi teknologi Industry 4.0.</p>
+                    `,
+                    technologies: [
+                        { name: 'PLC Siemens S7-1500', icon: 'fas fa-microchip' },
+                        { name: 'SCADA WinCC', icon: 'fas fa-desktop' },
+                        { name: 'IoT Sensors', icon: 'fas fa-satellite-dish' },
+                        { name: 'Node.js Backend', icon: 'fab fa-node-js' },
+                        { name: 'React Dashboard', icon: 'fab fa-react' },
+                        { name: 'MongoDB Database', icon: 'fas fa-database' }
+                    ],
+                    features: [
+                        'Real-time monitoring sistem produksi',
+                        'Predictive maintenance dengan AI/ML',
+                        'Dashboard analytics yang komprehensif',
+                        'Sistem alarm dan notifikasi otomatis',
+                        'Integrasi dengan ERP system',
+                        'Mobile app untuk monitoring remote'
+                    ],
+                    steps: [
+                        { title: 'Analisis Kebutuhan', desc: 'Identifikasi proses yang akan diautomasi dan sensor yang dibutuhkan' },
+                        { title: 'Desain Arsitektur', desc: 'Merancang arsitektur sistem IoT dan network topology' },
+                        { title: 'Hardware Installation', desc: 'Instalasi PLC, sensor, dan perangkat IoT' },
+                        { title: 'Programming PLC', desc: 'Pemrograman logic control dan komunikasi data' },
+                        { title: 'Dashboard Development', desc: 'Pengembangan interface monitoring dan analytics' },
+                        { title: 'Testing & Commissioning', desc: 'Testing sistem dan commissioning di lapangan' }
+                    ],
+                    code: `
+// Example: IoT Data Collection
+const mqtt = require('mqtt');
+const client = mqtt.connect('mqtt://localhost:1883');
+
+client.on('connect', () => {
+    console.log('Connected to MQTT broker');
+    client.subscribe('factory/sensors/+');
+});
+
+client.on('message', (topic, message) => {
+    const data = JSON.parse(message.toString());
+    processFactoryData(data);
+});
+
+function processFactoryData(data) {
+    // Process sensor data
+    if (data.temperature > 80) {
+        sendAlert('High temperature detected');
+    }
+}
+                    `,
+                    views: 2847,
+                    downloads: 156,
+                    rating: 4.8
+                },
+                'conveyor-system': {
+                    title: 'Automated Conveyor Control',
+                    subtitle: 'Sistem kontrol conveyor otomatis dengan sorting',
+                    icon: 'fas fa-conveyor-belt',
+                    duration: '3-4 bulan',
+                    difficulty: 'Intermediate',
+                    team: '3-5 orang',
+                    overview: `
+                        <p>Sistem kontrol conveyor otomatis yang dilengkapi dengan sorting mechanism untuk meningkatkan efisiensi proses handling material di industri.</p>
+                        <p>Sistem ini menggunakan sensor vision dan barcode scanner untuk identifikasi produk dan sorting otomatis berdasarkan kriteria yang telah ditentukan.</p>
+                    `,
+                    technologies: [
+                        { name: 'PLC Allen Bradley', icon: 'fas fa-microchip' },
+                        { name: 'HMI Panelview', icon: 'fas fa-tv' },
+                        { name: 'Vision System', icon: 'fas fa-eye' },
+                        { name: 'Servo Motors', icon: 'fas fa-cog' }
+                    ],
+                    features: [
+                        'Kontrol kecepatan conveyor variable',
+                        'Sistem sorting otomatis',
+                        'Vision inspection system',
+                        'Barcode scanning integration',
+                        'Production counting dan reporting'
+                    ],
+                    steps: [
+                        { title: 'Mechanical Design', desc: 'Desain mechanical conveyor dan sorting mechanism' },
+                        { title: 'Electrical Wiring', desc: 'Instalasi panel listrik dan wiring sensor' },
+                        { title: 'PLC Programming', desc: 'Programming logic control untuk conveyor' },
+                        { title: 'HMI Development', desc: 'Pembuatan interface operator' },
+                        { title: 'Testing', desc: 'Testing dan fine-tuning sistem' }
+                    ],
+                    code: `
+// Ladder Logic Example (Structured Text)
+IF Start_Button AND NOT Stop_Button THEN
+    Conveyor_Motor := TRUE;
+    IF Product_Sensor THEN
+        Sort_Cylinder := TRUE;
+    END_IF;
+END_IF;
+                    `,
+                    views: 1923,
+                    downloads: 89,
+                    rating: 4.6
+                },
+                'robotic-assembly': {
+                    title: 'Robotic Assembly Line',
+                    subtitle: 'Sistem assembly line robotik untuk otomasi produksi',
+                    icon: 'fas fa-robot',
+                    duration: '8-10 bulan',
+                    difficulty: 'Advanced',
+                    team: '6-10 orang',
+                    overview: `
+                        <p>Sistem assembly line robotik yang mengintegrasikan multiple robot untuk proses assembly otomatis dengan presisi tinggi.</p>
+                        <p>Sistem ini menggunakan collaborative robots (cobots) yang dapat bekerja bersama manusia dengan aman dan efisien.</p>
+                    `,
+                    technologies: [
+                        { name: 'ABB Robot Controller', icon: 'fas fa-robot' },
+                        { name: 'Vision Guidance System', icon: 'fas fa-eye' },
+                        { name: 'Force/Torque Sensors', icon: 'fas fa-hand-paper' },
+                        { name: 'Safety PLC', icon: 'fas fa-shield-alt' }
+                    ],
+                    features: [
+                        'Multi-robot coordination',
+                        'Vision-guided assembly',
+                        'Force feedback control',
+                        'Safety monitoring system',
+                        'Quality inspection integration'
+                    ],
+                    steps: [
+                        { title: 'System Design', desc: 'Desain layout dan workflow assembly line' },
+                        { title: 'Robot Programming', desc: 'Programming robot movements dan logic' },
+                        { title: 'Vision System Setup', desc: 'Konfigurasi vision system untuk guidance' },
+                        { title: 'Safety Implementation', desc: 'Implementasi safety system dan protocols' },
+                        { title: 'Integration Testing', desc: 'Testing integrasi semua komponen sistem' }
+                    ],
+                    code: `
+// Robot Program Example (RAPID)
+PROC main()
+    MoveJ home, v1000, z50, tool0;
+    
+    ! Pick part from conveyor
+    MoveL pick_pos, v500, fine, tool0;
+    Set gripper_close;
+    WaitTime 0.5;
+    
+    ! Move to assembly position
+    MoveL assembly_pos, v200, fine, tool0;
+    Set gripper_open;
+    
+    ! Return to home
+    MoveJ home, v1000, z50, tool0;
+ENDPROC
+                    `,
+                    views: 3421,
+                    downloads: 234,
+                    rating: 4.9
+                },
+                'temperature-control': {
+                    title: 'Temperature Control System',
+                    subtitle: 'Sistem kontrol suhu presisi untuk proses industri',
+                    icon: 'fas fa-thermometer-half',
+                    duration: '4-6 bulan',
+                    difficulty: 'Intermediate',
+                    team: '3-5 orang',
+                    overview: `
+                        <p>Sistem kontrol suhu dengan algoritma PID untuk menjaga suhu proses dalam toleransi yang ketat.</p>
+                        <p>Dilengkapi dengan monitoring real-time dan alarm system untuk keamanan proses.</p>
+                    `,
+                    technologies: [
+                        { name: 'Temperature Sensors', icon: 'fas fa-thermometer-half' },
+                        { name: 'PID Controller', icon: 'fas fa-cogs' },
+                        { name: 'Heating Elements', icon: 'fas fa-fire' },
+                        { name: 'HMI Interface', icon: 'fas fa-desktop' }
+                    ],
+                    features: [
+                        'PID temperature control',
+                        'Multi-zone monitoring',
+                        'Alarm and safety system',
+                        'Data logging and trending',
+                        'Remote monitoring capability'
+                    ],
+                    steps: [
+                        { title: 'Sensor Installation', desc: 'Instalasi temperature sensors di berbagai zone' },
+                        { title: 'Controller Setup', desc: 'Konfigurasi PID controller parameters' },
+                        { title: 'HMI Development', desc: 'Pembuatan interface monitoring dan control' },
+                        { title: 'Calibration', desc: 'Kalibrasi sensors dan tuning PID' },
+                        { title: 'Testing', desc: 'Testing performance dan safety functions' }
+                    ],
+                    code: `
+// PID Controller Implementation
+float PID_Control(float setpoint, float process_value) {
+    float error = setpoint - process_value;
+    integral += error * dt;
+    float derivative = (error - previous_error) / dt;
+    
+    float output = Kp * error + Ki * integral + Kd * derivative;
+    previous_error = error;
+    
+    return output;
+}
+                    `,
+                    views: 2156,
+                    downloads: 145,
+                    rating: 4.5
+                },
+                'batch-control': {
+                    title: 'Batch Process Control',
+                    subtitle: 'Sistem kontrol proses batch untuk industri kimia',
+                    icon: 'fas fa-flask',
+                    duration: '6-8 bulan',
+                    difficulty: 'Advanced',
+                    team: '4-6 orang',
+                    overview: `
+                        <p>Sistem kontrol proses batch yang mengikuti standar ISA-88 untuk industri kimia dan farmasi.</p>
+                        <p>Sistem ini memungkinkan eksekusi recipe yang fleksibel dengan tracking batch genealogy.</p>
+                    `,
+                    technologies: [
+                        { name: 'Batch Management System', icon: 'fas fa-tasks' },
+                        { name: 'Recipe Management', icon: 'fas fa-book' },
+                        { name: 'Process Historian', icon: 'fas fa-chart-line' },
+                        { name: 'MES Integration', icon: 'fas fa-network-wired' }
+                    ],
+                    features: [
+                        'ISA-88 compliant batch control',
+                        'Recipe management system',
+                        'Batch genealogy tracking',
+                        'Electronic batch records',
+                        'MES/ERP integration'
+                    ],
+                    steps: [
+                        { title: 'Process Analysis', desc: 'Analisis proses dan definisi equipment modules' },
+                        { title: 'Recipe Development', desc: 'Pengembangan master recipes dan procedures' },
+                        { title: 'Control Logic', desc: 'Programming control logic untuk setiap phase' },
+                        { title: 'HMI Development', desc: 'Pembuatan operator interface dan reporting' },
+                        { title: 'Validation', desc: 'Validasi sistem sesuai regulatory requirements' }
+                    ],
+                    code: `
+// Batch Phase Example
+PHASE_BLOCK Heat_Phase
+    IF Phase_Command = START THEN
+        Set_Heater(TRUE);
+        Phase_State := RUNNING;
+    END_IF;
+    
+    IF Temperature >= Setpoint AND Phase_State = RUNNING THEN
+        Set_Heater(FALSE);
+        Phase_State := COMPLETE;
+    END_IF;
+END_PHASE_BLOCK;
+                    `,
+                    views: 1876,
+                    downloads: 98,
+                    rating: 4.7
+                }
+            };
+
+            // Load project data based on URL parameter
+            function loadProjectData() {
+                const urlParams = new URLSearchParams(window.location.search);
+                const projectId = urlParams.get('id');
+                const project = projectData[projectId];
+
+                if (project) {
+                    // Update page content
+                    document.getElementById('project-breadcrumb').textContent = project.title;
+                    document.getElementById('project-icon').className = project.icon;
+                    document.getElementById('project-title').textContent = project.title;
+                    document.getElementById('project-subtitle').textContent = project.subtitle;
+                    document.getElementById('project-duration').textContent = project.duration;
+                    document.getElementById('project-difficulty').textContent = project.difficulty;
+                    document.getElementById('project-team').textContent = project.team;
+                    document.getElementById('project-overview').innerHTML = project.overview;
+                    document.getElementById('project-views').textContent = project.views;
+                    document.getElementById('project-downloads').textContent = project.downloads;
+                    document.getElementById('project-rating').textContent = project.rating;
+
+                    // Load technologies
+                    const techGrid = document.getElementById('project-technologies');
+                    techGrid.innerHTML = project.technologies.map(tech => `
+                        <div class="tech-item">
+                            <i class="${tech.icon}"></i>
+                            <span>${tech.name}</span>
+                        </div>
+                    `).join('');
+
+                    // Load features
+                    const featuresList = document.getElementById('project-features');
+                    featuresList.innerHTML = project.features.map(feature => `
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>${feature}</span>
+                        </div>
+                    `).join('');
+
+                    // Load steps
+                    const stepsContainer = document.getElementById('project-steps');
+                    stepsContainer.innerHTML = project.steps.map((step, index) => `
+                        <div class="step-item">
+                            <div class="step-number">${index + 1}</div>
+                            <div class="step-content">
+                                <h4>${step.title}</h4>
+                                <p>${step.desc}</p>
+                            </div>
+                        </div>
+                    `).join('');
+
+                    // Load code
+                    const codeContainer = document.getElementById('project-code');
+                    codeContainer.innerHTML = `
+                        <div class="code-block">
+                            <div class="code-header">
+                                <span>Example Code</span>
+                                <button class="copy-btn" onclick="copyCode()">
+                                    <i class="fas fa-copy"></i> Copy
+                                </button>
+                            </div>
+                            <pre><code>${project.code}</code></pre>
+                        </div>
+                    `;
+
+                    // Load related projects
+                    loadRelatedProjects(projectId);
+
+                    // Update page title
+                    document.title = `${project.title} - AutomationEdu`;
+                } else {
+                    // Project not found
+                    document.getElementById('project-title').textContent = 'Proyek Tidak Ditemukan';
+                    document.getElementById('project-subtitle').textContent = 'Maaf, proyek yang Anda cari tidak tersedia.';
+                }
+            }
+
+            // Load related projects
+            function loadRelatedProjects(currentProjectId) {
+                const relatedContainer = document.getElementById('related-projects');
+                const allProjects = Object.keys(projectData).filter(id => id !== currentProjectId);
+                const relatedProjects = allProjects.slice(0, 3); // Show 3 related projects
+
+                relatedContainer.innerHTML = relatedProjects.map(projectId => {
+                    const project = projectData[projectId];
+                    return `
+                        <div class="related-item" onclick="window.location.href='project-detail.html?id=${projectId}'">
+                            <h4>${project.title}</h4>
+                            <p>${project.subtitle}</p>
+                        </div>
+                    `;
+                }).join('');
+            }
+
+            // Copy code function
+            function copyCode() {
+                const codeElement = document.querySelector('#project-code code');
+                navigator.clipboard.writeText(codeElement.textContent);
+                
+                const copyBtn = document.querySelector('.copy-btn');
+                copyBtn.innerHTML = '<i class="fas fa-check"></i> Copied!';
+                setTimeout(() => {
+                    copyBtn.innerHTML = '<i class="fas fa-copy"></i> Copy';
+                }, 2000);
+            }
+
+            // Initialize page
+            document.addEventListener('DOMContentLoaded', loadProjectData);
+        </script>
+    </body>
+</html>

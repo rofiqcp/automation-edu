@@ -310,6 +310,189 @@ document.querySelectorAll('.btn, .course-btn').forEach(btn => {
     });
 });
 
+// Enhanced card hover effects
+document.addEventListener('DOMContentLoaded', () => {
+    // Add hover effects to cards
+    const cards = document.querySelectorAll('.feature-card, .course-card, .tutorial-card, .project-card');
+    
+    cards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-10px) scale(1.02)';
+            this.style.boxShadow = '0 20px 40px rgba(0, 0, 0, 0.15)';
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0) scale(1)';
+            this.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.1)';
+        });
+    });
+
+    // Add ripple effect to buttons
+    const buttons = document.querySelectorAll('.btn');
+    buttons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            const ripple = document.createElement('span');
+            const rect = this.getBoundingClientRect();
+            const size = Math.max(rect.width, rect.height);
+            const x = e.clientX - rect.left - size / 2;
+            const y = e.clientY - rect.top - size / 2;
+            
+            ripple.style.cssText = `
+                position: absolute;
+                width: ${size}px;
+                height: ${size}px;
+                left: ${x}px;
+                top: ${y}px;
+                background: rgba(255, 255, 255, 0.3);
+                border-radius: 50%;
+                transform: scale(0);
+                animation: ripple 0.6s linear;
+                pointer-events: none;
+            `;
+            
+            this.style.position = 'relative';
+            this.style.overflow = 'hidden';
+            this.appendChild(ripple);
+            
+            setTimeout(() => {
+                ripple.remove();
+            }, 600);
+        });
+    });
+
+    // Add CSS for ripple animation
+    const style = document.createElement('style');
+    style.textContent = `
+        @keyframes ripple {
+            to {
+                transform: scale(4);
+                opacity: 0;
+            }
+        }
+        
+        .card-animate {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.6s ease-out;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .slide-in-left {
+            animation: slideInLeft 0.6s ease-out;
+        }
+        
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        .slide-in-right {
+            animation: slideInRight 0.6s ease-out;
+        }
+        
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        
+        .bounce-in {
+            animation: bounceIn 0.8s ease-out;
+        }
+        
+        @keyframes bounceIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.3);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1.1);
+            }
+            70% {
+                transform: scale(0.9);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+    `;
+    document.head.appendChild(style);
+
+    // Apply animations to elements as they come into view
+    const animateOnScroll = () => {
+        const elements = document.querySelectorAll('.feature-card, .course-card, .tutorial-card, .project-card');
+        
+        elements.forEach((element, index) => {
+            const rect = element.getBoundingClientRect();
+            const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
+            
+            if (isVisible && !element.classList.contains('animated')) {
+                element.classList.add('animated');
+                
+                setTimeout(() => {
+                    if (index % 3 === 0) {
+                        element.classList.add('slide-in-left');
+                    } else if (index % 3 === 1) {
+                        element.classList.add('fade-in');
+                    } else {
+                        element.classList.add('slide-in-right');
+                    }
+                }, index * 100);
+            }
+        });
+    };
+
+    // Run animation check on scroll
+    window.addEventListener('scroll', animateOnScroll);
+    animateOnScroll(); // Run once on load
+
+    // Add card animation classes
+    cards.forEach(card => {
+        card.classList.add('card-animate');
+    });
+});
+
 // Theme toggle (bonus feature)
 function initThemeToggle() {
     const themeToggle = document.createElement('button');
