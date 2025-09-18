@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://rofiqcp.github.io/automation-edu/sitemap.xml
+
+# Disallow certain directories
+Disallow: /node_modules/
+Disallow: /.git/
+Disallow: /dist/
+Disallow: /.github/
+Disallow: /.husky/
