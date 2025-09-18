@@ -313,15 +313,17 @@ document.querySelectorAll('.btn, .course-btn').forEach(btn => {
 // Enhanced card hover effects
 document.addEventListener('DOMContentLoaded', () => {
     // Add hover effects to cards
-    const cards = document.querySelectorAll('.feature-card, .course-card, .tutorial-card, .project-card');
-    
+    const cards = document.querySelectorAll(
+        '.feature-card, .course-card, .tutorial-card, .project-card'
+    );
+
     cards.forEach(card => {
-        card.addEventListener('mouseenter', function() {
+        card.addEventListener('mouseenter', function () {
             this.style.transform = 'translateY(-10px) scale(1.02)';
             this.style.boxShadow = '0 20px 40px rgba(0, 0, 0, 0.15)';
         });
-        
-        card.addEventListener('mouseleave', function() {
+
+        card.addEventListener('mouseleave', function () {
             this.style.transform = 'translateY(0) scale(1)';
             this.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.1)';
         });
@@ -330,13 +332,13 @@ document.addEventListener('DOMContentLoaded', () => {
     // Add ripple effect to buttons
     const buttons = document.querySelectorAll('.btn');
     buttons.forEach(button => {
-        button.addEventListener('click', function(e) {
+        button.addEventListener('click', function (e) {
             const ripple = document.createElement('span');
             const rect = this.getBoundingClientRect();
             const size = Math.max(rect.width, rect.height);
             const x = e.clientX - rect.left - size / 2;
             const y = e.clientY - rect.top - size / 2;
-            
+
             ripple.style.cssText = `
                 position: absolute;
                 width: ${size}px;
@@ -349,11 +351,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 animation: ripple 0.6s linear;
                 pointer-events: none;
             `;
-            
+
             this.style.position = 'relative';
             this.style.overflow = 'hidden';
             this.appendChild(ripple);
-            
+
             setTimeout(() => {
                 ripple.remove();
             }, 600);
@@ -461,15 +463,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Apply animations to elements as they come into view
     const animateOnScroll = () => {
-        const elements = document.querySelectorAll('.feature-card, .course-card, .tutorial-card, .project-card');
-        
+        const elements = document.querySelectorAll(
+            '.feature-card, .course-card, .tutorial-card, .project-card'
+        );
+
         elements.forEach((element, index) => {
             const rect = element.getBoundingClientRect();
             const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
-            
+
             if (isVisible && !element.classList.contains('animated')) {
                 element.classList.add('animated');
-                
+
                 setTimeout(() => {
                     if (index % 3 === 0) {
                         element.classList.add('slide-in-left');

@@ -854,17 +854,20 @@ body {
         gap: 2rem;
     }
 
-    .project-header, .tutorial-header {
+    .project-header,
+    .tutorial-header {
         flex-direction: column;
         text-align: center;
         gap: 1.5rem;
     }
 
-    .project-info h1, .tutorial-info h1 {
+    .project-info h1,
+    .tutorial-info h1 {
         font-size: 2rem;
     }
 
-    .project-meta, .tutorial-meta {
+    .project-meta,
+    .tutorial-meta {
         justify-content: center;
     }
 
@@ -923,11 +926,13 @@ body {
         font-size: 0.9rem;
     }
 
-    .project-hero, .tutorial-hero {
+    .project-hero,
+    .tutorial-hero {
         padding: 6rem 0 3rem;
     }
 
-    .project-info h1, .tutorial-info h1 {
+    .project-info h1,
+    .tutorial-info h1 {
         font-size: 1.8rem;
     }
 
@@ -963,7 +968,8 @@ html {
 }
 
 /* ===== PROJECT & TUTORIAL DETAIL STYLES ===== */
-.project-hero, .tutorial-hero {
+.project-hero,
+.tutorial-hero {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
     padding: 8rem 0 4rem;
@@ -971,7 +977,8 @@ html {
     overflow: hidden;
 }
 
-.project-hero::before, .tutorial-hero::before {
+.project-hero::before,
+.tutorial-hero::before {
     content: '';
     position: absolute;
     top: 0;
@@ -1004,7 +1011,8 @@ html {
     opacity: 0.6;
 }
 
-.project-header, .tutorial-header {
+.project-header,
+.tutorial-header {
     display: flex;
     align-items: center;
     gap: 2rem;
@@ -1012,7 +1020,8 @@ html {
     z-index: 1;
 }
 
-.project-icon, .tutorial-icon {
+.project-icon,
+.tutorial-icon {
     width: 80px;
     height: 80px;
     background: rgba(255, 255, 255, 0.2);
@@ -1025,23 +1034,27 @@ html {
     border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.project-info, .tutorial-info {
+.project-info,
+.tutorial-info {
     flex: 1;
 }
 
-.project-info h1, .tutorial-info h1 {
+.project-info h1,
+.tutorial-info h1 {
     font-size: 2.5rem;
     margin-bottom: 0.5rem;
     font-weight: 700;
 }
 
-.project-info p, .tutorial-info p {
+.project-info p,
+.tutorial-info p {
     font-size: 1.2rem;
     opacity: 0.9;
     margin-bottom: 1.5rem;
 }
 
-.project-meta, .tutorial-meta {
+.project-meta,
+.tutorial-meta {
     display: flex;
     gap: 2rem;
     flex-wrap: wrap;
@@ -1084,7 +1097,8 @@ html {
 }
 
 /* Content Grid */
-.project-content, .tutorial-content {
+.project-content,
+.tutorial-content {
     padding: 4rem 0;
     background: #f8fafc;
 }
@@ -1386,7 +1400,8 @@ html {
     margin-top: 1.5rem;
 }
 
-.chapter-content ul, .chapter-content ol {
+.chapter-content ul,
+.chapter-content ol {
     margin-left: 1.5rem;
     margin-bottom: 1rem;
 }
@@ -1395,7 +1410,9 @@ html {
     margin-bottom: 0.5rem;
 }
 
-.info-box, .warning-box, .success-box {
+.info-box,
+.warning-box,
+.success-box {
     padding: 1rem;
     border-radius: 8px;
     margin: 1.5rem 0;
@@ -1454,7 +1471,7 @@ html {
     background: #f1f5f9;
 }
 
-.checklist input[type="checkbox"] {
+.checklist input[type='checkbox'] {
     width: 16px;
     height: 16px;
 }

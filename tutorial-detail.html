@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
     <head>
         <meta charset="UTF-8" />
@@ -28,7 +28,9 @@
                         <a href="courses.html" class="nav-link">Kursus</a>
                     </li>
                     <li class="nav-item">
-                        <a href="tutorials.html" class="nav-link active">Tutorial</a>
+                        <a href="tutorials.html" class="nav-link active"
+                            >Tutorial</a
+                        >
                     </li>
                     <li class="nav-item">
                         <a href="projects.html" class="nav-link">Proyek</a>
@@ -81,9 +83,15 @@
                         </div>
                         <div class="tutorial-progress">
                             <div class="progress-bar">
-                                <div class="progress-fill" id="progress-fill"></div>
+                                <div
+                                    class="progress-fill"
+                                    id="progress-fill"
+                                ></div>
                             </div>
-                            <span class="progress-text">Progress: <span id="progress-percent">0%</span></span>
+                            <span class="progress-text"
+                                >Progress:
+                                <span id="progress-percent">0%</span></span
+                            >
                         </div>
                     </div>
                 </div>
@@ -97,12 +105,17 @@
                     <div class="main-content">
                         <!-- Tutorial Navigation -->
                         <div class="tutorial-nav">
-                            <button class="nav-btn prev-btn" id="prev-btn" disabled>
+                            <button
+                                class="nav-btn prev-btn"
+                                id="prev-btn"
+                                disabled
+                            >
                                 <i class="fas fa-chevron-left"></i>
                                 Sebelumnya
                             </button>
                             <span class="chapter-indicator">
-                                Bab <span id="current-chapter">1</span> dari <span id="total-chapters">5</span>
+                                Bab <span id="current-chapter">1</span> dari
+                                <span id="total-chapters">5</span>
                             </span>
                             <button class="nav-btn next-btn" id="next-btn">
                                 Selanjutnya
@@ -140,7 +153,9 @@
 
                         <!-- Tutorial Info -->
                         <div class="sidebar-card">
-                            <h3><i class="fas fa-info-circle"></i> Info Tutorial</h3>
+                            <h3>
+                                <i class="fas fa-info-circle"></i> Info Tutorial
+                            </h3>
                             <div class="info-list">
                                 <div class="info-item">
                                     <strong>Kategori:</strong>
@@ -156,7 +171,10 @@
                                 </div>
                                 <div class="info-item">
                                     <strong>Rating:</strong>
-                                    <div class="rating-stars" id="tutorial-rating">
+                                    <div
+                                        class="rating-stars"
+                                        id="tutorial-rating"
+                                    >
                                         <!-- Stars will be generated -->
                                     </div>
                                 </div>
@@ -165,7 +183,10 @@
 
                         <!-- Related Tutorials -->
                         <div class="sidebar-card">
-                            <h3><i class="fas fa-graduation-cap"></i> Tutorial Terkait</h3>
+                            <h3>
+                                <i class="fas fa-graduation-cap"></i> Tutorial
+                                Terkait
+                            </h3>
                             <div id="related-tutorials" class="related-list">
                                 <!-- Dynamic content -->
                             </div>
@@ -244,7 +265,8 @@
             const tutorialData = {
                 'plc-setup': {
                     title: 'Setup dan Konfigurasi PLC',
-                    subtitle: 'Panduan lengkap setup PLC dari awal hingga siap digunakan',
+                    subtitle:
+                        'Panduan lengkap setup PLC dari awal hingga siap digunakan',
                     icon: 'fas fa-microchip',
                     duration: '45 menit',
                     level: 'Beginner',
@@ -272,7 +294,7 @@
                                     <i class="fas fa-lightbulb"></i>
                                     <p><strong>Tips:</strong> Selalu pastikan spesifikasi PLC sesuai dengan kebutuhan aplikasi Anda sebelum melakukan pembelian.</p>
                                 </div>
-                            `
+                            `,
                         },
                         {
                             title: 'Persiapan Hardware',
@@ -304,7 +326,7 @@ Q0.1 - Indicator Lamp
 Q0.2 - Alarm Buzzer
                                     </pre>
                                 </div>
-                            `
+                            `,
                         },
                         {
                             title: 'Software Installation',
@@ -335,7 +357,7 @@ Q0.2 - Alarm Buzzer
                                     <i class="fas fa-exclamation-triangle"></i>
                                     <p><strong>Perhatian:</strong> Pastikan versi software kompatibel dengan hardware PLC yang digunakan.</p>
                                 </div>
-                            `
+                            `,
                         },
                         {
                             title: 'Konfigurasi Komunikasi',
@@ -365,7 +387,7 @@ Subnet Mask: 255.255.255.0
                                     <li>Pastikan mendapat reply dari PLC</li>
                                     <li>Jika timeout, cek kabel dan setting IP</li>
                                 </ol>
-                            `
+                            `,
                         },
                         {
                             title: 'Program Pertama',
@@ -402,13 +424,14 @@ Network 2: Indicator Lamp
                                     <i class="fas fa-check-circle"></i>
                                     <p><strong>Selamat!</strong> Anda telah berhasil membuat program PLC pertama. Download dan test program ke PLC.</p>
                                 </div>
-                            `
-                        }
-                    ]
+                            `,
+                        },
+                    ],
                 },
                 'ladder-logic-basics': {
                     title: 'Dasar-dasar Ladder Logic',
-                    subtitle: 'Memahami konsep fundamental ladder logic programming',
+                    subtitle:
+                        'Memahami konsep fundamental ladder logic programming',
                     icon: 'fas fa-project-diagram',
                     duration: '60 menit',
                     level: 'Beginner',
@@ -431,14 +454,15 @@ Network 2: Indicator Lamp
                                     <li>Standar industri yang luas</li>
                                     <li>Debugging yang mudah</li>
                                 </ul>
-                            `
-                        }
+                            `,
+                        },
                         // Add more chapters...
-                    ]
+                    ],
                 },
                 'function-block': {
                     title: 'Function Block Programming',
-                    subtitle: 'Memahami dan menggunakan Function Block dalam PLC',
+                    subtitle:
+                        'Memahami dan menggunakan Function Block dalam PLC',
                     icon: 'fas fa-cubes',
                     duration: '90 menit',
                     level: 'Intermediate',
@@ -466,7 +490,7 @@ Network 2: Indicator Lamp
                                     <i class="fas fa-lightbulb"></i>
                                     <p><strong>Tips:</strong> Function Block sangat berguna untuk operasi yang sering digunakan seperti PID control, timer, counter, dll.</p>
                                 </div>
-                            `
+                            `,
                         },
                         {
                             title: 'Membuat Function Block',
@@ -499,7 +523,7 @@ VAR
 END_VAR
                                     </pre>
                                 </div>
-                            `
+                            `,
                         },
                         {
                             title: 'Logic Implementation',
@@ -539,13 +563,14 @@ END_IF;
 Motor_Fault := Fault_Memory;
                                     </code></pre>
                                 </div>
-                            `
-                        }
-                    ]
+                            `,
+                        },
+                    ],
                 },
                 'scada-dashboard': {
                     title: 'SCADA Dashboard Design',
-                    subtitle: 'Merancang dashboard SCADA yang efektif dan user-friendly',
+                    subtitle:
+                        'Merancang dashboard SCADA yang efektif dan user-friendly',
                     icon: 'fas fa-desktop',
                     duration: '120 menit',
                     level: 'Intermediate',
@@ -573,7 +598,7 @@ Motor_Fault := Fault_Memory;
                                     <i class="fas fa-exclamation-triangle"></i>
                                     <p><strong>Perhatian:</strong> Hindari penggunaan warna merah dan hijau bersamaan untuk user yang color blind.</p>
                                 </div>
-                            `
+                            `,
                         },
                         {
                             title: 'Layout dan Navigation',
@@ -599,10 +624,10 @@ Motor_Fault := Fault_Memory;
                                         <p>Dedicated screen untuk alarm management</p>
                                     </div>
                                 </div>
-                            `
-                        }
-                    ]
-                }
+                            `,
+                        },
+                    ],
+                },
             };
 
             let currentTutorial = null;
@@ -616,17 +641,28 @@ Motor_Fault := Fault_Memory;
 
                 if (currentTutorial) {
                     // Update page content
-                    document.getElementById('tutorial-breadcrumb').textContent = currentTutorial.title;
-                    document.getElementById('tutorial-icon').className = currentTutorial.icon;
-                    document.getElementById('tutorial-title').textContent = currentTutorial.title;
-                    document.getElementById('tutorial-subtitle').textContent = currentTutorial.subtitle;
-                    document.getElementById('tutorial-duration').textContent = currentTutorial.duration;
-                    document.getElementById('tutorial-level').textContent = currentTutorial.level;
-                    document.getElementById('tutorial-views').textContent = currentTutorial.views.toLocaleString();
-                    document.getElementById('tutorial-category').textContent = currentTutorial.category;
-                    document.getElementById('tutorial-date').textContent = currentTutorial.date;
-                    document.getElementById('tutorial-updated').textContent = currentTutorial.updated;
-                    document.getElementById('total-chapters').textContent = currentTutorial.chapters.length;
+                    document.getElementById('tutorial-breadcrumb').textContent =
+                        currentTutorial.title;
+                    document.getElementById('tutorial-icon').className =
+                        currentTutorial.icon;
+                    document.getElementById('tutorial-title').textContent =
+                        currentTutorial.title;
+                    document.getElementById('tutorial-subtitle').textContent =
+                        currentTutorial.subtitle;
+                    document.getElementById('tutorial-duration').textContent =
+                        currentTutorial.duration;
+                    document.getElementById('tutorial-level').textContent =
+                        currentTutorial.level;
+                    document.getElementById('tutorial-views').textContent =
+                        currentTutorial.views.toLocaleString();
+                    document.getElementById('tutorial-category').textContent =
+                        currentTutorial.category;
+                    document.getElementById('tutorial-date').textContent =
+                        currentTutorial.date;
+                    document.getElementById('tutorial-updated').textContent =
+                        currentTutorial.updated;
+                    document.getElementById('total-chapters').textContent =
+                        currentTutorial.chapters.length;
 
                     // Generate rating stars
                     generateRatingStars(currentTutorial.rating);
@@ -644,31 +680,39 @@ Motor_Fault := Fault_Memory;
                     document.title = `${currentTutorial.title} - AutomationEdu`;
                 } else {
                     // Tutorial not found
-                    document.getElementById('tutorial-title').textContent = 'Tutorial Tidak Ditemukan';
-                    document.getElementById('tutorial-subtitle').textContent = 'Maaf, tutorial yang Anda cari tidak tersedia.';
+                    document.getElementById('tutorial-title').textContent =
+                        'Tutorial Tidak Ditemukan';
+                    document.getElementById('tutorial-subtitle').textContent =
+                        'Maaf, tutorial yang Anda cari tidak tersedia.';
                 }
             }
 
             // Load related tutorials
             function loadRelatedTutorials(currentTutorialId) {
-                const relatedContainer = document.getElementById('related-tutorials');
-                const allTutorials = Object.keys(tutorialData).filter(id => id !== currentTutorialId);
+                const relatedContainer =
+                    document.getElementById('related-tutorials');
+                const allTutorials = Object.keys(tutorialData).filter(
+                    id => id !== currentTutorialId
+                );
                 const relatedTutorials = allTutorials.slice(0, 3); // Show 3 related tutorials
 
-                relatedContainer.innerHTML = relatedTutorials.map(tutorialId => {
-                    const tutorial = tutorialData[tutorialId];
-                    return `
+                relatedContainer.innerHTML = relatedTutorials
+                    .map(tutorialId => {
+                        const tutorial = tutorialData[tutorialId];
+                        return `
                         <div class="related-item" onclick="window.location.href='tutorial-detail.html?id=${tutorialId}'">
                             <h4>${tutorial.title}</h4>
                             <p>${tutorial.subtitle}</p>
                         </div>
                     `;
-                }).join('');
+                    })
+                    .join('');
             }
 
             // Generate rating stars
             function generateRatingStars(rating) {
-                const ratingContainer = document.getElementById('tutorial-rating');
+                const ratingContainer =
+                    document.getElementById('tutorial-rating');
                 const fullStars = Math.floor(rating);
                 const hasHalfStar = rating % 1 !== 0;
                 let starsHTML = '';
@@ -692,42 +736,61 @@ Motor_Fault := Fault_Memory;
 
             // Generate table of contents
             function generateTableOfContents() {
-                const tocContainer = document.getElementById('table-of-contents');
+                const tocContainer =
+                    document.getElementById('table-of-contents');
                 const chapters = currentTutorial.chapters;
 
-                tocContainer.innerHTML = chapters.map((chapter, index) => `
+                tocContainer.innerHTML = chapters
+                    .map(
+                        (chapter, index) => `
                     <div class="toc-item ${index === currentChapter ? 'active' : ''}" onclick="loadChapter(${index})">
                         <div class="toc-number">${index + 1}</div>
                         <div class="toc-title">${chapter.title}</div>
                     </div>
-                `).join('');
+                `
+                    )
+                    .join('');
             }
 
             // Load specific chapter
             function loadChapter(chapterIndex) {
-                if (chapterIndex < 0 || chapterIndex >= currentTutorial.chapters.length) return;
+                if (
+                    chapterIndex < 0 ||
+                    chapterIndex >= currentTutorial.chapters.length
+                )
+                    return;
 
                 currentChapter = chapterIndex;
                 const chapter = currentTutorial.chapters[chapterIndex];
 
                 // Update chapter content
-                document.getElementById('chapter-content').innerHTML = chapter.content;
-                document.getElementById('current-chapter').textContent = chapterIndex + 1;
+                document.getElementById('chapter-content').innerHTML =
+                    chapter.content;
+                document.getElementById('current-chapter').textContent =
+                    chapterIndex + 1;
 
                 // Update navigation buttons
-                document.getElementById('prev-btn').disabled = chapterIndex === 0;
-                document.getElementById('next-btn').disabled = chapterIndex === currentTutorial.chapters.length - 1;
+                document.getElementById('prev-btn').disabled =
+                    chapterIndex === 0;
+                document.getElementById('next-btn').disabled =
+                    chapterIndex === currentTutorial.chapters.length - 1;
 
                 // Update progress
-                const progress = ((chapterIndex + 1) / currentTutorial.chapters.length) * 100;
-                document.getElementById('progress-fill').style.width = progress + '%';
-                document.getElementById('progress-percent').textContent = Math.round(progress) + '%';
+                const progress =
+                    ((chapterIndex + 1) / currentTutorial.chapters.length) *
+                    100;
+                document.getElementById('progress-fill').style.width =
+                    progress + '%';
+                document.getElementById('progress-percent').textContent =
+                    Math.round(progress) + '%';
 
                 // Update table of contents
                 generateTableOfContents();
 
                 // Scroll to top
-                document.querySelector('.tutorial-content').scrollIntoView({ behavior: 'smooth' });
+                document
+                    .querySelector('.tutorial-content')
+                    .scrollIntoView({ behavior: 'smooth' });
             }
 
             // Navigation functions
@@ -741,9 +804,11 @@ Motor_Fault := Fault_Memory;
 
             // Copy code function
             function copyTutorialCode(button) {
-                const codeBlock = button.closest('.code-block').querySelector('code');
+                const codeBlock = button
+                    .closest('.code-block')
+                    .querySelector('code');
                 navigator.clipboard.writeText(codeBlock.textContent);
-                
+
                 button.innerHTML = '<i class="fas fa-check"></i> Copied!';
                 setTimeout(() => {
                     button.innerHTML = '<i class="fas fa-copy"></i> Copy';
@@ -755,24 +820,36 @@ Motor_Fault := Fault_Memory;
                 loadTutorialData();
 
                 // Navigation buttons
-                document.getElementById('next-btn').addEventListener('click', nextChapter);
-                document.getElementById('prev-btn').addEventListener('click', prevChapter);
+                document
+                    .getElementById('next-btn')
+                    .addEventListener('click', nextChapter);
+                document
+                    .getElementById('prev-btn')
+                    .addEventListener('click', prevChapter);
 
                 // Bookmark button
-                document.getElementById('bookmark-btn').addEventListener('click', () => {
-                    const btn = document.getElementById('bookmark-btn');
-                    btn.classList.toggle('bookmarked');
-                    if (btn.classList.contains('bookmarked')) {
-                        btn.innerHTML = '<i class="fas fa-bookmark"></i> Bookmarked';
-                    } else {
-                        btn.innerHTML = '<i class="fas fa-bookmark"></i> Bookmark';
-                    }
-                });
+                document
+                    .getElementById('bookmark-btn')
+                    .addEventListener('click', () => {
+                        const btn = document.getElementById('bookmark-btn');
+                        btn.classList.toggle('bookmarked');
+                        if (btn.classList.contains('bookmarked')) {
+                            btn.innerHTML =
+                                '<i class="fas fa-bookmark"></i> Bookmarked';
+                        } else {
+                            btn.innerHTML =
+                                '<i class="fas fa-bookmark"></i> Bookmark';
+                        }
+                    });
 
                 // Complete button
-                document.getElementById('complete-btn').addEventListener('click', () => {
-                    alert('Tutorial selesai! Sertifikat akan dikirim ke email Anda.');
-                });
+                document
+                    .getElementById('complete-btn')
+                    .addEventListener('click', () => {
+                        alert(
+                            'Tutorial selesai! Sertifikat akan dikirim ke email Anda.'
+                        );
+                    });
             });
         </script>
     </body>
